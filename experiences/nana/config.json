@@ -1,0 +1,49 @@
+{
+  "name": "Nana Eg",
+  "birthdayDate": "2026-07-15",
+  "senderName": "MrNicosh Eg (Big Bro)",
+  "theme": "storybook",
+  "unlockSchedule": {
+    "morning": "00:01",
+    "afternoon": "00:02",
+    "evening": "00:03",
+  },
+  "colors": {
+    "primary": "#d4a574",
+    "accent": "#f0d080",
+    "background": "#0d0a05",
+    "text": "#fff8ee",
+    "glass": "rgba(255, 245, 225, 0.05)"
+  },
+  "chapters": {
+    "one": {
+      "greeting": "Welcome, Tiny Princess",
+      "message": "Before you could walk, you were already a queen. These little moments are where your story began.",
+      "photos": [
+        { "id":"1", "src":"/experiences/nana/photos/memory1.jpg", "alt":"Baby Nana", "caption":"The day you made our world brighter." },
+        { "id":"2", "src":"/experiences/nana/photos/memory2.jpg", "alt":"Little Nana", "caption":"Little feet, giant heart." }
+      ]
+    },
+    "two": {
+      "title": "The Family Kingdom",
+      "subtitle": "Everyone who loves you has a message.",
+      "timeline": [
+        { "id":"t1", "time":"Mom", "title":"The Queen's Words", "description":"My sweet Nana, you are the greatest gift." },
+        { "id":"t2", "time":"Dad", "title":"The King's Blessing", "description":"Nana, you carry my strength and your mother's grace." },
+        { "id":"t3", "time":"Brother", "title":"Your Guardian", "description":"I'll always be here — to protect you, to love you." },
+        { "id":"t4", "time":"Grandma", "title":"Wisdom", "description":"You have a light that can never be dimmed." }
+      ]
+    },
+    "three": {
+      "letter": ["My dear little sister Nana,","You are my reminder that goodness exists.","With all the love a big brother can hold,"],
+      "voiceMessageUrl": "/experiences/nana/audio/voice-message.aac",
+      "videoUrl": "/experiences/nana/videos/birthday-video.mp4",
+      "finalSurprise": "Check under your pillow — there's a little surprise waiting."
+    }
+  },
+  "easterEggs": [
+    { "id":"e1", "type":"star", "message":"Every star is a wish for you.", "position":{"x":10,"y":15}, "animation":"sparkle" },
+    { "id":"e2", "type":"butterfly", "message":"You are magic.", "position":{"x":80,"y":30}, "animation":"flutter" }
+  ],
+  "musicUrl": "/experiences/nana/audio/background-music.mp3"
+}
