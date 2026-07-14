@@ -10,17 +10,14 @@ exports.modules = {
 var map = {
 	"./maryjane/config.json": [
 		5172,
-		3,
 		172
 	],
 	"./nana/config.json": [
 		3393,
-		7,
 		393
 	],
 	"./nanaeg/config.json": [
 		2084,
-		3,
 		84
 	]
 };
@@ -34,8 +31,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[2]).then(() => {
-		return __webpack_require__.t(id, ids[1] | 16)
+	return __webpack_require__.e(ids[1]).then(() => {
+		return __webpack_require__.t(id, 3 | 16);
 	});
 }
 webpackAsyncContext.keys = () => (Object.keys(map));
@@ -277,7 +274,7 @@ const routeModule = new AppPageRouteModule({
 /***/ 1061:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7809))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5489))
 
 /***/ }),
 
@@ -288,19 +285,19 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 8214:
+/***/ 6573:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6926, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2987, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 831, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6926, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4282, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6505, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1232, 23))
 
 /***/ }),
 
-/***/ 7809:
+/***/ 5489:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -472,6 +469,261 @@ function PetalField({ timeOfDay = "morning" }) {
     return /*#__PURE__*/ jsx_runtime_.jsx("canvas", {
         ref: canvasRef,
         className: "fixed inset-0 pointer-events-none z-1"
+    });
+}
+
+// EXTERNAL MODULE: ./contexts/MusicContext.tsx
+var MusicContext = __webpack_require__(9100);
+;// CONCATENATED MODULE: ./components/LandingScreen.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+
+function LandingScreen({ onBegin, herName }) {
+    const [step, setStep] = (0,react_.useState)(0);
+    const { startMusic } = (0,MusicContext.useMusic)();
+    (0,react_.useEffect)(()=>{
+        const t1 = setTimeout(()=>setStep(1), 1200);
+        const t2 = setTimeout(()=>setStep(2), 4800);
+        const t3 = setTimeout(()=>setStep(3), 8800);
+        const t4 = setTimeout(()=>setStep(4), 12800);
+        return ()=>{
+            clearTimeout(t1);
+            clearTimeout(t2);
+            clearTimeout(t3);
+            clearTimeout(t4);
+        };
+    }, []);
+    const today = new Date().toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
+    const handleBegin = ()=>{
+        startMusic();
+        onBegin();
+    };
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(motion/* motion */.E.div, {
+        className: "fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0a0f]",
+        exit: {
+            opacity: 0,
+            filter: "blur(8px)"
+        },
+        transition: {
+            duration: 2,
+            ease: [
+                0.43,
+                0.13,
+                0.23,
+                0.96
+            ]
+        },
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "absolute inset-0 overflow-hidden",
+                children: /*#__PURE__*/ jsx_runtime_.jsx(motion/* motion */.E.div, {
+                    className: "absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[130px]",
+                    style: {
+                        background: "rgba(212,139,160,0.06)"
+                    },
+                    animate: {
+                        scale: [
+                            1,
+                            1.12,
+                            1
+                        ],
+                        opacity: [
+                            0.5,
+                            0.7,
+                            0.5
+                        ]
+                    },
+                    transition: {
+                        duration: 10,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }
+                })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "relative z-10 text-center px-6 max-w-2xl",
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(AnimatePresence/* AnimatePresence */.M, {
+                        children: step >= 0 && /*#__PURE__*/ (0,jsx_runtime_.jsxs)(motion/* motion */.E.div, {
+                            initial: {
+                                opacity: 0,
+                                y: -20
+                            },
+                            animate: {
+                                opacity: 1,
+                                y: 0
+                            },
+                            transition: {
+                                delay: 0.3,
+                                duration: 1.2
+                            },
+                            className: "mb-12",
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    className: "inline-flex items-center gap-3 glass-card-light px-5 py-2.5 rounded-full",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                            className: "w-2 h-2 rounded-full bg-[#d48ba0] animate-pulse"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                            className: "text-white/50 text-xs tracking-[0.2em] uppercase",
+                                            children: "Handcrafted for one person"
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                                    className: "text-white/20 text-xs mt-3 font-mono",
+                                    children: [
+                                        "Visitors: 1 \xa0|\xa0 Owner: ",
+                                        herName
+                                    ]
+                                })
+                            ]
+                        })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(AnimatePresence/* AnimatePresence */.M, {
+                        mode: "wait",
+                        children: [
+                            step === 1 && /*#__PURE__*/ (0,jsx_runtime_.jsxs)(motion/* motion */.E.p, {
+                                initial: {
+                                    opacity: 0,
+                                    y: 40
+                                },
+                                animate: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                exit: {
+                                    opacity: 0
+                                },
+                                transition: {
+                                    duration: 2,
+                                    ease: [
+                                        0.43,
+                                        0.13,
+                                        0.23,
+                                        0.96
+                                    ]
+                                },
+                                className: "text-2xl md:text-4xl font-serif font-light text-white/70",
+                                children: [
+                                    "Today is ",
+                                    today,
+                                    "."
+                                ]
+                            }, "s1"),
+                            step === 2 && /*#__PURE__*/ jsx_runtime_.jsx(motion/* motion */.E.p, {
+                                initial: {
+                                    opacity: 0,
+                                    y: 40
+                                },
+                                animate: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                exit: {
+                                    opacity: 0
+                                },
+                                transition: {
+                                    duration: 2
+                                },
+                                className: "text-xl md:text-3xl font-serif font-light text-white/60",
+                                children: "Millions of people woke up today..."
+                            }, "s2"),
+                            step === 3 && /*#__PURE__*/ jsx_runtime_.jsx(motion/* motion */.E.p, {
+                                initial: {
+                                    opacity: 0,
+                                    y: 40
+                                },
+                                animate: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                exit: {
+                                    opacity: 0
+                                },
+                                transition: {
+                                    duration: 2
+                                },
+                                className: "text-2xl md:text-4xl font-serif font-light text-white/80",
+                                children: "But today belongs to one person."
+                            }, "s3"),
+                            step >= 4 && /*#__PURE__*/ (0,jsx_runtime_.jsxs)(motion/* motion */.E.div, {
+                                initial: {
+                                    opacity: 0,
+                                    scale: 0.95
+                                },
+                                animate: {
+                                    opacity: 1,
+                                    scale: 1
+                                },
+                                transition: {
+                                    duration: 2.5,
+                                    ease: [
+                                        0.43,
+                                        0.13,
+                                        0.23,
+                                        0.96
+                                    ]
+                                },
+                                className: "space-y-12",
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(motion/* motion */.E.h1, {
+                                        className: "text-display font-serif font-light gradient-text leading-tight",
+                                        initial: {
+                                            letterSpacing: "0.2em"
+                                        },
+                                        animate: {
+                                            letterSpacing: "0.02em"
+                                        },
+                                        transition: {
+                                            duration: 2.5,
+                                            delay: 0.5
+                                        },
+                                        children: [
+                                            "Happy Birthday,",
+                                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                                            herName
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ jsx_runtime_.jsx(motion/* motion */.E.div, {
+                                        initial: {
+                                            opacity: 0,
+                                            y: 30
+                                        },
+                                        animate: {
+                                            opacity: 1,
+                                            y: 0
+                                        },
+                                        transition: {
+                                            delay: 2,
+                                            duration: 1.5
+                                        },
+                                        children: /*#__PURE__*/ jsx_runtime_.jsx(motion/* motion */.E.button, {
+                                            onClick: handleBegin,
+                                            className: "px-10 py-4 bg-gradient-to-br from-[#d48ba0] to-[#c08090] text-white font-serif text-lg rounded-full shadow-2xl shadow-[#d48ba0]/25 hover:shadow-[#d48ba0]/45 transition-all duration-500",
+                                            whileHover: {
+                                                scale: 1.04
+                                            },
+                                            whileTap: {
+                                                scale: 0.96
+                                            },
+                                            children: "Begin Your Journey"
+                                        })
+                                    })
+                                ]
+                            }, "s4")
+                        ]
+                    })
+                ]
+            })
+        ]
     });
 }
 
@@ -996,8 +1248,6 @@ function ChapterTwo({ title, subtitle, timeline }) {
     });
 }
 
-// EXTERNAL MODULE: ./contexts/MusicContext.tsx
-var MusicContext = __webpack_require__(9100);
 ;// CONCATENATED MODULE: ./components/AudioPlayer.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
@@ -2147,7 +2397,6 @@ function HiddenLetter() {
 }
 
 ;// CONCATENATED MODULE: ./components/DefaultExperience.tsx
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/LandingScreen'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -2214,24 +2463,18 @@ function DefaultExperience({ config }) {
             "--accent": colors.accent
         },
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(Particles, {
-                color: colors.primary
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(PetalField, {
-                color: colors.primary
-            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(Particles, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(PetalField, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(MusicToggle, {
                 musicUrl: musicUrl
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(EasterEggs, {
                 eggs: easterEggs
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx(HiddenLetter, {
-                name: name
-            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(HiddenLetter, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(AnimatePresence/* AnimatePresence */.M, {
                 mode: "wait",
-                children: current === "landing" && /*#__PURE__*/ jsx_runtime_.jsx(Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/LandingScreen'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+                children: current === "landing" && /*#__PURE__*/ jsx_runtime_.jsx(LandingScreen, {
                     onBegin: handleBegin,
                     herName: name
                 })
@@ -2317,18 +2560,13 @@ function StoryOpening({ name, onComplete, morningUnlocked }) {
             clearTimeout(t4);
         };
     }, []);
-    const handleBegin = ()=>{
-        startMusic();
-        onComplete();
-    };
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(motion/* motion */.E.div, {
         className: "fixed inset-0 z-[100] flex items-center justify-center",
         style: {
             background: "radial-gradient(ellipse at center, #1a1208 0%, #0d0a05 100%)"
         },
         exit: {
-            opacity: 0,
-            filter: "blur(10px)"
+            opacity: 0
         },
         transition: {
             duration: 2
@@ -2478,7 +2716,10 @@ function StoryOpening({ name, onComplete, morningUnlocked }) {
                                     ]
                                 }),
                                 morningUnlocked ? /*#__PURE__*/ jsx_runtime_.jsx(motion/* motion */.E.button, {
-                                    onClick: handleBegin,
+                                    onClick: ()=>{
+                                        startMusic();
+                                        onComplete();
+                                    },
                                     className: "px-10 py-4 bg-gradient-to-br from-[#d4a574] to-[#b8956e] text-white font-serif text-lg rounded-full shadow-2xl",
                                     whileHover: {
                                         scale: 1.04
@@ -2916,22 +3157,21 @@ function StoryEnding({ name, senderName, onNext }) {
             clearTimeout(t3);
         };
     }, []);
-    const fadeOutMusic = ()=>{
-        if (!audioEl) return;
-        let vol = audioEl.volume;
-        const fade = setInterval(()=>{
-            vol = Math.max(0, vol - 0.02);
-            audioEl.volume = vol;
-            if (vol <= 0) {
-                clearInterval(fade);
-                audioEl.pause();
-            }
-        }, 150);
-    };
     (0,react_.useEffect)(()=>{
-        if (step === 2) fadeOutMusic();
+        if (step === 2 && audioEl) {
+            let vol = audioEl.volume;
+            const fade = setInterval(()=>{
+                vol = Math.max(0, vol - 0.02);
+                audioEl.volume = vol;
+                if (vol <= 0) {
+                    clearInterval(fade);
+                    audioEl.pause();
+                }
+            }, 150);
+        }
     }, [
-        step
+        step,
+        audioEl
     ]);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(motion/* motion */.E.section, {
         initial: {
@@ -3174,11 +3414,8 @@ function StorybookExperience({ config }) {
     }, [
         check
     ]);
-    // Auto-advance from opening to world one if morning unlocked
     (0,react_.useEffect)(()=>{
-        if (currentWorld === "opening" && morningUnlocked) {
-            setCurrentWorld("one");
-        }
+        if (currentWorld === "opening" && morningUnlocked) setCurrentWorld("one");
     }, [
         morningUnlocked,
         currentWorld

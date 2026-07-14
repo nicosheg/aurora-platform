@@ -56,11 +56,11 @@ export default function DefaultExperience({ config }: { config: ExperienceConfig
         "--accent": colors.accent,
       } as React.CSSProperties}
     >
-      <Particles color={colors.primary} />
-      <PetalField color={colors.primary} />
+      <Particles />
+      <PetalField />
       <MusicToggle musicUrl={musicUrl} />
       <EasterEggs eggs={easterEggs} />
-      <HiddenLetter name={name} />
+      <HiddenLetter />
 
       <AnimatePresence mode="wait">
         {current === "landing" && <LandingScreen onBegin={handleBegin} herName={name} />}

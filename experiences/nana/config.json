@@ -6,7 +6,7 @@
   "unlockSchedule": {
     "morning": "00:01",
     "afternoon": "00:02",
-    "evening": "00:03",
+    "evening": "00:03"
   },
   "colors": {
     "primary": "#d4a574",

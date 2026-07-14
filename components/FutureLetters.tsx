@@ -19,9 +19,7 @@ export default function FutureLetters({ onNext }: { onNext: () => void }) {
         {letters.map((letter, i) => (
           <motion.div key={i} className="glass-card-light p-4 cursor-pointer" whileHover={{ scale:1.03 }} onClick={() => setOpened([...opened, i])}>
             <p className="text-[#f0d080] font-serif">💌 {letter.from}</p>
-            {opened.includes(i) && (
-              <motion.p initial={{ opacity:0 }} animate={{ opacity:1 }} className="text-white/70 mt-2">{letter.message}</motion.p>
-            )}
+            {opened.includes(i) && <motion.p initial={{ opacity:0 }} animate={{ opacity:1 }} className="text-white/70 mt-2">{letter.message}</motion.p>}
           </motion.div>
         ))}
       </div>

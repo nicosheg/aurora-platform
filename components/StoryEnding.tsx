@@ -18,17 +18,16 @@ export default function StoryEnding({ name, senderName, onNext }: { name: string
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
 
-  const fadeOutMusic = () => {
-    if (!audioEl) return;
-    let vol = audioEl.volume;
-    const fade = setInterval(() => {
-      vol = Math.max(0, vol - 0.02);
-      audioEl.volume = vol;
-      if (vol <= 0) { clearInterval(fade); audioEl.pause(); }
-    }, 150);
-  };
-
-  useEffect(() => { if (step===2) fadeOutMusic(); }, [step]);
+  useEffect(() => {
+    if (step===2 && audioEl) {
+      let vol = audioEl.volume;
+      const fade = setInterval(() => {
+        vol = Math.max(0, vol - 0.02);
+        audioEl.volume = vol;
+        if (vol <= 0) { clearInterval(fade); audioEl.pause(); }
+      }, 150);
+    }
+  }, [step, audioEl]);
 
   return (
     <motion.section initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }} className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0d0a05]">
@@ -38,9 +37,7 @@ export default function StoryEnding({ name, senderName, onNext }: { name: string
         {step>=1 && <motion.p initial={{ opacity:0, y:30 }} animate={{ opacity:1, y:0 }} className="mt-6 text-2xl md:text-4xl font-serif font-light text-[#f0d080]">Never stop smiling.</motion.p>}
         {step>=2 && (
           <motion.div initial={{ opacity:0, scale:0.9 }} animate={{ opacity:1, scale:1 }} className="mt-12 space-y-8">
-            <h2 className="text-4xl md:text-6xl font-serif font-light" style={{ background:"linear-gradient(135deg, #f0d080, #d4a574)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>
-              You'll always be our little sister.
-            </h2>
+            <h2 className="text-4xl md:text-6xl font-serif font-light" style={{ background:"linear-gradient(135deg, #f0d080, #d4a574)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>You'll always be our little sister.</h2>
             <motion.div className="text-6xl" animate={{ scale:[1,1.3,1] }} transition={{ duration:2, repeat:Infinity }}>❤️</motion.div>
             <p className="text-white/40 text-sm">— {senderName}</p>
             <motion.button onClick={onNext} className="px-8 py-3 bg-[#d4a574]/20 border border-[#d4a574]/40 rounded-full text-[#f0d080]" whileHover={{ scale:1.05 }}>Time Capsule</motion.button>
