@@ -1,0 +1,63 @@
+{
+  "name": "Brother Emma Best",
+  "birthdayDate": "2026-07-15",
+  "senderName": "MrNicosh Eg",
+  "theme": "legacy",
+  "unlockSchedule": {
+    "morning": "08:00",
+    "afternoon": "14:00",
+    "evening": "19:00"
+  },
+  "colors": {
+    "primary": "#c9a96e",
+    "accent": "#b8956e",
+    "background": "#0a0a0f",
+    "text": "#f5f0eb",
+    "glass": "rgba(255, 245, 225, 0.05)"
+  },
+  "sections": {
+    "welcome": {
+      "title": "Happy Birthday, Brother Emma Best.",
+      "subtitle": "Some birthdays celebrate age. This one celebrates influence.",
+      "buttonText": "Begin the Journey"
+    },
+    "story": {
+      "message": "I’ve known you through church, and one thing I’ve always admired is the way you carry yourself. Whether you realise it or not, you’ve inspired people around you."
+    },
+    "strengths": [
+      { "id": "faith", "title": "Faith", "description": "You walk with conviction that inspires others to trust God more deeply." },
+      { "id": "leadership", "title": "Leadership", "description": "You guide with quiet confidence, never needing to be loud to be effective." },
+      { "id": "humility", "title": "Humility", "description": "You serve without seeking recognition, and that’s exactly why you deserve it." },
+      { "id": "service", "title": "Service", "description": "You show up for people in ways most never see — and God sees every bit of it." },
+      { "id": "consistency", "title": "Consistency", "description": "In a world of shifting trends, your steadiness is a gift to everyone around you." },
+      { "id": "wisdom", "title": "Wisdom", "description": "You think before you speak, and when you speak, people listen." }
+    ],
+    "scripture": {
+      "reference": "1 Timothy 4:12",
+      "text": "Let no one despise your youth, but be an example to the believers in word, in conduct, in love, in spirit, in faith, in purity."
+    },
+    "reflection": {
+      "questions": [
+        "What are you most grateful for this year?",
+        "What lesson changed you the most?",
+        "What kind of man do you want to become before your next birthday?"
+      ]
+    },
+    "letter": {
+      "paragraphs": [
+        "Dear Brother Emma,",
+        "Today isn’t just another birthday — it’s a moment to pause and recognise the man God is shaping you into.",
+        "From the first time I saw you serve in church, I knew you carried something different. Not pride. Not ambition. But a quiet strength that comes from knowing who you belong to.",
+        "As you step into another year, my prayer is that you continue to grow in wisdom, deepen in faith, and lead with the kind of love that leaves people better than you found them.",
+        "You are appreciated. You are seen. And you are loved.",
+        "Happy Birthday, Brother Emma.",
+        "With respect and gratitude,"
+      ]
+    },
+    "final": {
+      "quote": "The world doesn’t only need successful people. It needs faithful people who leave others better than they found them.",
+      "closing": "Happy Birthday, Brother Emma.\nMay God continue to guide every step you take."
+    }
+  },
+  "musicUrl": ""
+}

@@ -1,0 +1,14 @@
+"use strict";
+exports.id = 393;
+exports.ids = [393];
+exports.modules = {
+
+/***/ 3393:
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"name":"Nana Eg","birthdayDate":"2026-07-15","senderName":"MrNicosh Eg (Big Bro)","theme":"storybook","unlockSchedule":{"morning":"09:00","afternoon":"12:00","evening":"18:00"},"colors":{"primary":"#d4a574","accent":"#f0d080","background":"#0d0a05","text":"#fff8ee","glass":"rgba(255, 245, 225, 0.05)"},"voices":[{"id":"v1","name":"Grandma","emoji":"💛","message":"My sweet Nana, you are the light of our family.","audio":"/experiences/nana/voices/grandma.opus"},{"id":"v2","name":"Grandma","emoji":"💛","message":"Another blessing from your grandma.","audio":"/experiences/nana/voices/grandma2.opus"},{"id":"v3","name":"Antydupe","emoji":"🌸","message":"Nana! You\'re such a beautiful soul. Never change who you are.","audio":"/experiences/nana/voices/anydupe.opus"},{"id":"v4","name":"Big Bro Nicosh","emoji":"🖤","message":"Forever and always.","audio":"/experiences/nana/voices/brother.opus"}],"chapters":{"one":{"greeting":"Where You Started","message":"Before the world knew your name, you were already shaping ours.","photos":[{"id":"1","src":"/experiences/nana/photos/memory1.jpg","alt":"Little Nana","caption":"A tiny spark that would become a whole fire."},{"id":"2","src":"/experiences/nana/photos/memory2.jpg","alt":"Nana growing up","caption":"The same smile, the same heart — just taller now."}]},"two":{"title":"Your People","subtitle":"The ones who see you completely.","timeline":[{"id":"t1","time":"Mom","title":"The Anchor","description":"My sweet Nana, you are the greatest gift life ever gave me."},{"id":"t2","time":"Big Bro Nicosh","title":"The Protector","description":"I\'ll always be here — to protect you, to annoy you, to love you. That\'s what big brothers do. Forever and always."},{"id":"t3","time":"Aluaye","title":"The Partner-in-Crime","description":"Nana, you\'re not just my sister – you\'re my friend. Life\'s way more fun with you in it."},{"id":"t4","time":"Grandma","title":"The Wise One","description":"My dear child, you have a light inside you that can never be dimmed. Shine bright, always."},{"id":"t5","time":"Antydupe","title":"The Loving Aunt","description":"Nana! You\'re such a special soul. The world is better because you\'re in it."}]},"three":{"letter":["Nana,","Sixteen years. That\'s how long the world has been lucky enough to have you.","You are my reminder that goodness exists, that laughter heals, and that growing up doesn\'t mean losing your spark.","With all the love a big brother can hold,"],"voiceMessageUrl":"/experiences/nana/audio/voice-message.aac","videoUrl":"/experiences/nana/videos/birthday-video.mp4","finalSurprise":"Look under your pillow. There\'s a little something waiting for the birthday girl."}},"easterEggs":[],"musicUrl":"/experiences/nana/audio/background-music.m4a"}');
+
+/***/ })
+
+};
+;
