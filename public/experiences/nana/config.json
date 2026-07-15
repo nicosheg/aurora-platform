@@ -18,31 +18,31 @@
   "voices": [
     {
       "id": "v1",
-      "name": "Mom",
-      "emoji": "👩‍👧",
-      "message": "My sweet Nana, you are the greatest gift life ever gave me. Watching you grow into the amazing person you are fills my heart with pride every single day.",
-      "audio": "/experiences/nana/voices/mom.aac"
+      "name": "Grandma 💕",
+      "emoji": "👵",
+      "message": "My sweet Nana, you are the light of our family. Grandma loves you more than words can say.",
+      "audio": "/experiences/nana/voices/grandma.aac"
     },
     {
       "id": "v2",
+      "name": "Grandma 💕",
+      "emoji": "👵",
+      "message": "Another special blessing from your grandma. May this year bring you everything your heart desires.",
+      "audio": "/experiences/nana/voices/grandma2.aac"
+    },
+    {
+      "id": "v3",
+      "name": "Anydupe",
+      "emoji": "💕",
+      "message": "Nana! You're such a beautiful soul. Never change who you are. The world is better because you're in it.",
+      "audio": "/experiences/nana/voices/anydupe.aac"
+    },
+    {
+      "id": "v4",
       "name": "Big Bro Nicosh",
       "emoji": "👦",
       "message": "Nana, I'll always be here — to protect you, to annoy you, to love you. That's what big brothers do. Forever and always.",
       "audio": "/experiences/nana/voices/brother.aac"
-    },
-    {
-      "id": "v3",
-      "name": "Your Brother",
-      "emoji": "👦",
-      "message": "You're not just my sister, you're my friend. I'm so lucky to have you in my life. Happy birthday, Nana!",
-      "audio": "/experiences/nana/voices/brother2.aac"
-    },
-    {
-      "id": "v4",
-      "name": "Grandma",
-      "emoji": "👵",
-      "message": "My dear child, you have a light inside you that can never be dimmed. Shine bright, always. I love you more than words can say.",
-      "audio": "/experiences/nana/voices/grandma.aac"
     }
   ],
   "chapters": {
@@ -50,8 +50,8 @@
       "greeting": "Welcome, Tiny Princess",
       "message": "Before you could walk, you were already a queen. These little moments are where your story began.",
       "photos": [
-        { "id":"1", "src":"/experiences/nana/photos/memory1.jpg", "alt":"Baby Nana Eg", "caption":"The day you made our world brighter, little princess.", "hiddenStory":"You were so tiny, but your presence filled every room." },
-        { "id":"2", "src":"/experiences/nana/photos/memory2.jpg", "alt":"Nana Eg growing up", "caption":"Little feet, giant heart. And the most beautiful smile.", "hiddenStory":"Watching you grow has been the greatest privilege of my life." }
+        { "id":"1", "src":"/experiences/nana/photos/memory1.jpg", "alt":"Baby Nana Eg", "caption":"The day you made our world brighter, little princess." },
+        { "id":"2", "src":"/experiences/nana/photos/memory2.jpg", "alt":"Nana Eg growing up", "caption":"Little feet, giant heart. And the most beautiful smile." }
       ]
     },
     "two": {
@@ -60,8 +60,8 @@
       "timeline": [
         { "id":"t1", "time":"Mom", "title":"The Queen's Words", "description":"My sweet Nana, you are the greatest gift life ever gave me. Watching you grow fills my heart with pride every single day." },
         { "id":"t2", "time":"Big Bro Nicosh", "title":"Your Guardian", "description":"I'll always be here — to protect you, to annoy you, to love you. That's what big brothers do. Forever and always." },
-        { "id":"t3", "time":"Your Brother", "title":"Your Friend", "description":"You're not just my sister, you're my friend. I'm so lucky to have you in my life. Happy birthday, Nana!" },
-        { "id":"t4", "time":"Grandma", "title":"Wisdom & Love", "description":"My dear child, you have a light inside you that can never be dimmed. Shine bright, always." }
+        { "id":"t3", "time":"Grandma", "title":"Wisdom & Love", "description":"My dear child, you have a light inside you that can never be dimmed. Shine bright, always. I love you." },
+        { "id":"t4", "time":"Anydupe", "title":"Your Friend", "description":"Nana! You're such a special soul. Never change who you are. The world is better because you're in it." }
       ]
     },
     "three": {
