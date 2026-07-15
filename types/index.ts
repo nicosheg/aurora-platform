@@ -68,7 +68,7 @@ export interface ExperienceConfig {
   name: string;
   birthdayDate: string;
   senderName: string;
-  theme: "romantic" | "storybook" | "minimal" | "fantasy" | "galaxy";
+  theme: "romantic" | "storybook" | "minimal" | "fantasy" | "galaxy" | "legacy";
   unlockSchedule: UnlockSchedule;
   colors: {
     primary: string;
