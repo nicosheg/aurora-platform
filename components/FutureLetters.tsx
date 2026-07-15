@@ -13,8 +13,8 @@ export default function FutureLetters({ onNext }: { onNext: () => void }) {
   const [opened, setOpened] = useState<number[]>([]);
   return (
     <motion.section initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center">
-      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Five</motion.p>
-      <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">Future Letters</h2>
+      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">Letters from Tomorrow</motion.p>
+      <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">Words from the People Who Believe in You</h2>
       <div className="space-y-4 max-w-md mx-auto mb-12">
         {letters.map((letter, i) => (
           <motion.div key={i} className="glass-card-light p-4 cursor-pointer" whileHover={{ scale:1.03 }} onClick={() => setOpened([...opened, i])}>

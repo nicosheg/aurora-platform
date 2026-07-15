@@ -15,8 +15,8 @@ export default function TreasureHunt({ onNext }: { onNext: () => void }) {
   const discover = (id:number) => { if (!found.includes(id)) setFound([...found, id]); setActive(id); };
   return (
     <motion.section initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center">
-      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Three</motion.p>
-      <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">Treasure Hunt</h2>
+      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">Hidden Gems</motion.p>
+      <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">Find the Magic</h2>
       <p className="text-white/60 mb-8">Find the hidden treasures – tap each one.</p>
       <div className="flex flex-wrap justify-center gap-6 mb-12">
         {treasures.map(t => (
