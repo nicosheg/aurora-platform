@@ -19,6 +19,7 @@ export default function TheEnding({ name, senderName, onNext }: { name: string; 
       className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-black relative overflow-hidden"
     >
       <CelebrationOverlay />
+      <CelebrationOverlay />
       {/* Fireworks burst at step 2 */}
       {step >= 2 && (
         <motion.div className="absolute inset-0 pointer-events-none">

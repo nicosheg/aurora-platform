@@ -22,6 +22,7 @@ export default function TimeCapsule({ name }: { name: string }) {
       className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-black relative overflow-hidden"
     >
       <CelebrationOverlay />
+      <CelebrationOverlay />
       <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">
         Time Capsule
       </motion.p>
