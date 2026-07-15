@@ -20,35 +20,35 @@
       "id": "v1",
       "name": "Grandma",
       "emoji": "💛",
-      "message": "My sweet Nana, you are the light of our family. Grandma loves you more than words can say.",
+      "message": "My sweet Nana, you are the light of our family.",
       "audio": "/experiences/nana/voices/grandma.aac"
     },
     {
       "id": "v2",
       "name": "Grandma",
       "emoji": "💛",
-      "message": "Another special blessing from your grandma. May this year bring you everything your heart desires.",
+      "message": "Another blessing from your grandma.",
       "audio": "/experiences/nana/voices/grandma2.aac"
     },
     {
       "id": "v3",
       "name": "Anydupe",
       "emoji": "🌸",
-      "message": "Nana! You're such a beautiful soul. Never change who you are. The world is better because you're in it.",
+      "message": "Nana! You're such a beautiful soul.",
       "audio": "/experiences/nana/voices/anydupe.aac"
     },
     {
       "id": "v4",
       "name": "Big Bro Nicosh",
       "emoji": "🖤",
-      "message": "Nana, I'll always be here — to protect you, to annoy you, to love you. That's what big brothers do. Forever and always.",
+      "message": "Forever and always.",
       "audio": "/experiences/nana/voices/brother.aac"
     }
   ],
   "chapters": {
     "one": {
       "greeting": "Where You Started",
-      "message": "Before the world knew your name, you were already shaping ours. These snapshots are where your journey began — a beautiful soul taking her first steps into a life she'd fill with light.",
+      "message": "Before the world knew your name, you were already shaping ours.",
       "photos": [
         { "id":"1", "src":"/experiences/nana/photos/memory1.jpg", "alt":"Little Nana", "caption":"A tiny spark that would become a whole fire." },
         { "id":"2", "src":"/experiences/nana/photos/memory2.jpg", "alt":"Nana growing up", "caption":"The same smile, the same heart — just taller now." }
@@ -58,29 +58,24 @@
       "title": "Your People",
       "subtitle": "The ones who see you completely.",
       "timeline": [
-        { "id":"t1", "time":"Mom", "title":"The Anchor", "description":"My sweet Nana, you are the greatest gift life ever gave me. Watching you grow fills my heart with pride every single day." },
-        { "id":"t2", "time":"Big Bro Nicosh", "title":"The Protector", "description":"I'll always be here — to protect you, to annoy you, to love you. That's what big brothers do. Forever and always." },
-        { "id":"t3", "time":"Grandma", "title":"The Wise One", "description":"My dear child, you have a light inside you that can never be dimmed. Shine bright, always. I love you." },
-        { "id":"t4", "time":"Anydupe", "title":"The Real One", "description":"Nana! You're such a special soul. Never change who you are. The world is better because you're in it." }
+        { "id":"t1", "time":"Mom", "title":"The Anchor", "description":"My sweet Nana, you are the greatest gift life ever gave me." },
+        { "id":"t2", "time":"Big Bro Nicosh", "title":"The Protector", "description":"I'll always be here." },
+        { "id":"t3", "time":"Grandma", "title":"The Wise One", "description":"You have a light inside you that can never be dimmed." },
+        { "id":"t4", "time":"Anydupe", "title":"The Real One", "description":"Never change who you are." }
       ]
     },
     "three": {
       "letter": [
         "Nana,",
-        "Sixteen years. That's how long the world has been lucky enough to have you in it.",
-        "You are not just my little sister — you are my reminder that goodness exists, that laughter heals, and that growing up doesn't mean losing your spark.",
-        "At 16, the world opens up. New adventures, new dreams, new versions of yourself waiting to be discovered. And I promise you this: you'll never walk any of it alone.",
-        "Today, soak it in. Every smile, every voice, every moment — it's all for you.",
+        "Sixteen years. That's how long the world has been lucky enough to have you.",
+        "You are my reminder that goodness exists.",
         "With all the love a big brother can hold,"
       ],
       "voiceMessageUrl": "/experiences/nana/audio/voice-message.aac",
       "videoUrl": "/experiences/nana/videos/birthday-video.mp4",
-      "finalSurprise": "One last thing… Look under your pillow. There's a little something waiting for the birthday girl."
+      "finalSurprise": "Look under your pillow."
     }
   },
-  "easterEggs": [
-    { "id":"e1", "type":"star", "message":"You're 16. The world is yours. ✨", "position":{"x":10,"y":15}, "animation":"sparkle" },
-    { "id":"e2", "type":"butterfly", "message":"You are so much more than enough. 🦋", "position":{"x":80,"y":30}, "animation":"flutter" }
-  ],
+  "easterEggs": [],
   "musicUrl": "/experiences/nana/audio/background-music.m4a"
 }
