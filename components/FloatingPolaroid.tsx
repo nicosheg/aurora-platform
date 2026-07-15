@@ -1,14 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function FloatingPolaroid({ src }: { src: string }) {
-  const [show, setShow] = useState(true);
-  const [tapped, setTapped] = useState(false);
+export default function FloatingPolaroid({ src, active }: { src: string; active: boolean }) {
+  const [hidden, setHidden] = useState(false);
+
+  // If the component becomes inactive (leaving last two pages), reset hidden state
+  useEffect(() => {
+    if (!active) setHidden(false);
+  }, [active]);
+
+  const handleTap = () => {
+    setHidden(true);
+    // Reappear after 6 seconds
+    setTimeout(() => setHidden(false), 6000);
+  };
 
   return (
     <AnimatePresence>
-      {show && (
+      {active && !hidden && (
         <motion.div
           className="fixed z-40 pointer-events-auto cursor-pointer"
           style={{ left: "10%", top: "20%" }}
@@ -25,7 +35,7 @@ export default function FloatingPolaroid({ src }: { src: string }) {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          onClick={() => setTapped(true)}
+          onClick={handleTap}
           whileHover={{ scale: 1.1 }}
         >
           <div className="bg-white p-2 rounded-lg shadow-2xl rotate-3 transform">
@@ -38,17 +48,6 @@ export default function FloatingPolaroid({ src }: { src: string }) {
               a moment forever
             </p>
           </div>
-          {tapped && (
-            <motion.div
-              className="absolute -top-4 -right-4 text-2xl"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1.5, opacity: [1, 0] }}
-              transition={{ duration: 1 }}
-              onAnimationComplete={() => setTapped(false)}
-            >
-              ✨
-            </motion.div>
-          )}
         </motion.div>
       )}
     </AnimatePresence>

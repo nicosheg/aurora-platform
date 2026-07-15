@@ -43,12 +43,14 @@ export default function TributeExperience({ config }: { config: any }) {
     wrap(<TributeEnding key="ending" message={sections.ending.message} closing={sections.ending.closing} senderName={senderName} name={name} onBack={prev} />),
   ];
 
+  // Show floating polaroid only on the last two pages (index 8 and 9)
+  const showPolaroid = step === 8 || step === 9;
+
   return (
     <main className="relative min-h-screen bg-[#0a0a0f] text-white overflow-hidden">
       <StarField active={true} />
       {musicUrl && <MusicToggle musicUrl={musicUrl} />}
-      {/* Floating memory that follows her through the journey */}
-      <FloatingPolaroid src="/experiences/gbemi/hero.jpg" />
+      <FloatingPolaroid src="/experiences/gbemi/hero.jpg" active={showPolaroid} />
       <AnimatePresence mode="wait">
         <motion.div
           key={step}
