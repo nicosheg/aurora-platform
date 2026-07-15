@@ -1,0 +1,76 @@
+{
+  "name": "Gbemi",
+  "birthdayDate": "2026-07-14",
+  "senderName": "MrNicosh",
+  "theme": "tribute",
+  "colors": {
+    "primary": "#c9a96e",
+    "accent": "#b8956e",
+    "background": "#0a0a0f",
+    "text": "#f5f0eb",
+    "glass": "rgba(255, 245, 225, 0.05)"
+  },
+  "musicUrl": "/experiences/gbemi/audio/music.mp3#t=10",
+  "heroImage": "/experiences/gbemi/hero.jpg",
+  "sections": {
+    "opening": {
+      "lines": [
+        "Some moments deserve perfect timing.",
+        "This one deserved something even better.",
+        "I missed your birthday.",
+        "And I could have sent a simple apology…",
+        "…but you're not a simple person.",
+        "So I built something instead."
+      ],
+      "buttonText": "Enter Your Story"
+    },
+    "ripple": {
+      "memories": [
+        { "text": "That conversation that changed my perspective." },
+        { "text": "The time you made me laugh when I really needed it." },
+        { "text": "A small kindness you probably don't even remember." },
+        { "text": "The advice I still carry with me." }
+      ]
+    },
+    "hidden": {
+      "envelopes": [
+        "I admire how you treat people.",
+        "You make difficult days feel lighter.",
+        "You're the kind of friend people don't appreciate enough until years later.",
+        "I hope you never lose your curiosity."
+      ]
+    },
+    "library": {
+      "books": [
+        { "title": "The Day We Couldn't Stop Laughing", "story": "We laughed until our sides hurt. I still smile thinking about it." },
+        { "title": "That Conversation I'll Never Forget", "story": "You said something that stayed with me long after." },
+        { "title": "The Moment You Didn't Know You Helped Me", "story": "You were just being yourself — and it meant everything." }
+      ]
+    },
+    "future": {
+      "doors": [
+        { "quality": "Courage", "message": "You already have it. You just need to see it in yourself." },
+        { "quality": "Growth", "message": "I've watched you evolve — and I can't wait to see what's next." },
+        { "quality": "Adventure", "message": "The world is bigger because you're in it." }
+      ]
+    },
+    "constellation": {
+      "message": "Some people pass through your life. Others quietly become part of your story."
+    },
+    "forgotten": {
+      "text": "Yesterday was your birthday. I missed the date. And I'm genuinely sorry. But while calendars tell us when to celebrate someone… they don't decide whether they're worth celebrating. You are. Yesterday. Today. And on every ordinary day in between."
+    },
+    "gift": {
+      "prompts": [
+        { "label": "Read this when you feel overwhelmed.", "message": "You've handled hard things before. You will again. I believe in you." },
+        { "label": "Read this after a bad day.", "message": "Tomorrow is fresh. Be kind to yourself tonight." },
+        { "label": "Read this when you need a reminder that someone believes in you.", "message": "I do. Without hesitation." },
+        { "label": "Read this when you accomplish something amazing.", "message": "I'm so proud of you — and I hope you're proud of yourself too." }
+      ]
+    },
+    "ending": {
+      "message": "Thank you.\n\nNot for today. Not for opening this website. But for every laugh, every conversation, every moment of encouragement, and every way you've made the people around you better simply by being yourself.\n\nSome birthdays are celebrated with gifts. Some are celebrated with words. I wanted to celebrate yours with something built by hand.\n\nEven if it arrived one day late…\n\nthe appreciation behind it never was.",
+      "closing": "Happy Birthday.\nKeep growing.\nKeep dreaming.\nKeep being wonderfully you."
+    }
+  }
+}
