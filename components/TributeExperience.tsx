@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import StarField from "./StarField";
 import MusicToggle from "./MusicToggle";
 import CelebrationOverlay from "./CelebrationOverlay";
+import FloatingPolaroid from "./FloatingPolaroid";
 import TributeOpening from "./TributeOpening";
 import TributeRipple from "./TributeRipple";
 import TributeHidden from "./TributeHidden";
@@ -46,6 +47,8 @@ export default function TributeExperience({ config }: { config: any }) {
     <main className="relative min-h-screen bg-[#0a0a0f] text-white overflow-hidden">
       <StarField active={true} />
       {musicUrl && <MusicToggle musicUrl={musicUrl} />}
+      {/* Floating memory that follows her through the journey */}
+      <FloatingPolaroid src="/experiences/gbemi/hero.jpg" />
       <AnimatePresence mode="wait">
         <motion.div
           key={step}
