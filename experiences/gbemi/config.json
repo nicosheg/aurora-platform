@@ -11,7 +11,7 @@
     "glass": "rgba(255, 245, 225, 0.05)"
   },
   "musicUrl": "/experiences/gbemi/audio/music.mp3#t=10",
-  "heroImage": "/experiences/gbemi/hero.jpg",
+  "heroImage": "/experiences/gbemi/second-image.png",
   "sections": {
     "opening": {
       "lines": [
