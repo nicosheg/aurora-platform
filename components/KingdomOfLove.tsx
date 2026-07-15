@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useMusic } from "@/contexts/MusicContext";
 
@@ -9,26 +9,68 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const { lowerVolume, restoreVolume } = useMusic();
 
-  const handlePlay = (voice: any) => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current = null;
-      restoreVolume();
-    }
-    if (playingId === voice.id) {
+  // Clean up audio on unmount
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+        restoreVolume();
+      }
+    };
+  }, []);
+
+  // Find all voices for a given family member (by name matching)
+  const getVoicesForMember = (memberName: string) => {
+    return voices.filter((v: any) => v.name === memberName);
+  };
+
+  // Play a list of voices sequentially
+  const playSequential = async (voiceList: any[], index: number = 0) => {
+    if (index >= voiceList.length) {
       setPlayingId(null);
       restoreVolume();
       return;
     }
-    lowerVolume();
+    const voice = voiceList[index];
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
     const audio = new Audio(voice.audio);
-    audio.play();
+    audioRef.current = audio;
+    lowerVolume();
     setPlayingId(voice.id);
+    audio.play().catch(() => {});
+
     audio.onended = () => {
+      // Play next voice in list
+      playSequential(voiceList, index + 1);
+    };
+  };
+
+  const handlePlay = (memberName: string) => {
+    const memberVoices = getVoicesForMember(memberName);
+    if (memberVoices.length === 0) return;
+
+    // If already playing, stop
+    if (playingId) {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
       setPlayingId(null);
       restoreVolume();
-    };
-    audioRef.current = audio;
+      return;
+    }
+
+    // Start sequential playback
+    playSequential(memberVoices);
+  };
+
+  // Determine if a member has any voice note
+  const hasVoice = (memberName: string) => {
+    return getVoicesForMember(memberName).length > 0;
   };
 
   return (
@@ -37,15 +79,19 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
       <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">The Kingdom of Love</h2>
       <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-12">
         {family.map((member, i) => {
-          const voice = voices?.find((v: any) => v.name === member.time);
+          const memberHasVoice = hasVoice(member.time);
+          // Aluaye (Anydupe) – no voice button
+          const isAluaye = member.time === "Aluaye" || member.time === "Anydupe";
           return (
             <motion.div key={i} className="glass-card-light p-6 cursor-pointer" whileHover={{ scale: 1.05 }} onClick={() => setSelected(member)}>
               <div className="text-4xl mb-2">🏰</div>
               <p className="text-[#f0d080] font-serif">{member.time}</p>
-              {voice && (
-                <button onClick={(e) => { e.stopPropagation(); handlePlay(voice); }}
-                  className="mt-2 text-xs text-white/50 hover:text-white/80">
-                  {playingId === voice.id ? "🔊 Playing..." : "🎤 Listen"}
+              {memberHasVoice && !isAluaye && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); handlePlay(member.time); }}
+                  className="mt-2 text-xs text-white/50 hover:text-white/80"
+                >
+                  {playingId && getVoicesForMember(member.time).some(v => v.id === playingId) ? "🔊 Playing..." : "🎤 Listen"}
                 </button>
               )}
             </motion.div>

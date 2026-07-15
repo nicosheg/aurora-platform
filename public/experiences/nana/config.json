@@ -32,10 +32,10 @@
     },
     {
       "id": "v3",
-      "name": "Anydupe",
+      "name": "Aluaye",
       "emoji": "🌸",
-      "message": "Nana! You're such a beautiful soul.",
-      "audio": "/experiences/nana/voices/anydupe.aac"
+      "message": "Nana! You're such a beautiful soul. Never change who you are.",
+      "audio": ""
     },
     {
       "id": "v4",
@@ -43,13 +43,6 @@
       "emoji": "🖤",
       "message": "Forever and always.",
       "audio": "/experiences/nana/voices/brother.aac"
-    },
-    {
-      "id": "v5",
-      "name": "Aluaye",
-      "emoji": "🌺",
-      "message": "Nana, you are a star! Keep shining bright.",
-      "audio": "/experiences/nana/voices/aluaye.aac"
     }
   ],
   "chapters": {
@@ -66,22 +59,21 @@
       "subtitle": "The ones who see you completely.",
       "timeline": [
         { "id":"t1", "time":"Mom", "title":"The Anchor", "description":"My sweet Nana, you are the greatest gift life ever gave me." },
-        { "id":"t2", "time":"Big Bro Nicosh", "title":"The Protector", "description":"I'll always be here." },
-        { "id":"t3", "time":"Grandma", "title":"The Wise One", "description":"You have a light inside you that can never be dimmed." },
-        { "id":"t4", "time":"Anydupe", "title":"The Real One", "description":"Never change who you are." },
-        { "id":"t5", "time":"Aluaye", "title":"The Sunshine", "description":"You light up every room you walk into." }
+        { "id":"t2", "time":"Big Bro Nicosh", "title":"The Protector", "description":"I'll always be here — to protect you, to annoy you, to love you. That's what big brothers do. Forever and always." },
+        { "id":"t3", "time":"Grandma", "title":"The Wise One", "description":"My dear child, you have a light inside you that can never be dimmed. Shine bright, always. I love you." },
+        { "id":"t4", "time":"Aluaye", "title":"The Real One", "description":"Nana! You're such a special soul. Never change who you are. The world is better because you're in it." }
       ]
     },
     "three": {
       "letter": [
         "Nana,",
         "Sixteen years. That's how long the world has been lucky enough to have you.",
-        "You are my reminder that goodness exists.",
+        "You are my reminder that goodness exists, that laughter heals, and that growing up doesn't mean losing your spark.",
         "With all the love a big brother can hold,"
       ],
       "voiceMessageUrl": "/experiences/nana/audio/voice-message.aac",
       "videoUrl": "/experiences/nana/videos/birthday-video.mp4",
-      "finalSurprise": "Look under your pillow."
+      "finalSurprise": "Look under your pillow. There's a little something waiting for the birthday girl."
     }
   },
   "easterEggs": [],
