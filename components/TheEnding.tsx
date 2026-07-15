@@ -1,7 +1,6 @@
-"use client";
+import CelebrationOverlay from "@/components/CelebrationOverlay";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import CelebrationOverlay from "@/components/CelebrationOverlay";
 
 export default function TheEnding({ name, senderName, onNext }: { name: string; senderName: string; onNext: () => void }) {
   const [step, setStep] = useState(0);
@@ -12,15 +11,8 @@ export default function TheEnding({ name, senderName, onNext }: { name: string; 
   }, []);
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-black relative overflow-hidden"
-    >
+    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-black relative overflow-hidden">
       <CelebrationOverlay />
-      <CelebrationOverlay />
-      {/* Fireworks burst at step 2 */}
       {step >= 2 && (
         <motion.div className="absolute inset-0 pointer-events-none">
           {[...Array(12)].map((_, i) => (

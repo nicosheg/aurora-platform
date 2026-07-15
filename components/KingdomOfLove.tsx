@@ -1,5 +1,4 @@
 import CelebrationOverlay from "@/components/CelebrationOverlay";
-"use client";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useMusic } from "@/contexts/MusicContext";
@@ -20,9 +19,7 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
     };
   }, []);
 
-  const getVoicesForMember = (memberName: string) => {
-    return voices.filter((v: any) => v.name === memberName);
-  };
+  const getVoicesForMember = (memberName: string) => voices.filter((v: any) => v.name === memberName);
 
   const playSequential = async (voiceList: any[], index: number = 0) => {
     if (index >= voiceList.length) {
@@ -40,7 +37,6 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
     lowerVolume();
     setPlayingId(voice.id);
     audio.play().catch(() => {});
-
     audio.onended = () => {
       playSequential(voiceList, index + 1);
     };
@@ -49,7 +45,6 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
   const handlePlay = (memberName: string) => {
     const memberVoices = getVoicesForMember(memberName);
     if (memberVoices.length === 0) return;
-
     if (playingId) {
       if (audioRef.current) {
         audioRef.current.pause();
@@ -59,18 +54,20 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
       restoreVolume();
       return;
     }
-
     playSequential(memberVoices);
   };
 
-  const hasVoice = (memberName: string) => {
-    return getVoicesForMember(memberName).length > 0;
-  };
+  const hasVoice = (memberName: string) => getVoicesForMember(memberName).length > 0;
 
   return (
     <motion.section
-      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Two</motion.p>
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center relative overflow-hidden"
+    >
       <CelebrationOverlay />
+      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Two</motion.p>
       <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">The Kingdom of Love</h2>
       <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-12">
         {family.slice(0, 4).map((member, i) => {
@@ -91,14 +88,9 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
           );
         })}
       </div>
-      {/* 5th person (Antydupe) centered */}
       {family.length > 4 && (
         <div className="flex justify-center mb-12">
-          <motion.div
-            className="glass-card-light p-6 cursor-pointer w-40"
-            whileHover={{ scale: 1.05 }}
-            onClick={() => setSelected(family[4])}
-          >
+          <motion.div className="glass-card-light p-6 cursor-pointer w-40" whileHover={{ scale: 1.05 }} onClick={() => setSelected(family[4])}>
             <div className="text-4xl mb-2">🏰</div>
             <p className="text-[#f0d080] font-serif">{family[4].time}</p>
             {hasVoice(family[4].time) && (

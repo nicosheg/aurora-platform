@@ -1,5 +1,4 @@
 import CelebrationOverlay from "@/components/CelebrationOverlay";
-"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -7,18 +6,13 @@ export default function ConstellationOfPeople({ people, voices, onNext }: { peop
   const [selected, setSelected] = useState<any>(null);
 
   return (
-    <motion.section
-      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Six</motion.p>
+    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-black relative overflow-hidden">
       <CelebrationOverlay />
+      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Six</motion.p>
       <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">The Constellation of People Who Love You</h2>
       <div className="grid grid-cols-2 gap-8 max-w-md mx-auto mb-12">
         {people.map((person, i) => (
-          <motion.div
-            key={i}
-            className="glass-card-light p-4 cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            onClick={() => setSelected(person)}
-          >
+          <motion.div key={i} className="glass-card-light p-4 cursor-pointer" whileHover={{ scale: 1.05 }} onClick={() => setSelected(person)}>
             <div className="text-3xl">⭐</div>
             <p className="text-[#f0d080] font-serif text-sm mt-2">{person.time}</p>
           </motion.div>

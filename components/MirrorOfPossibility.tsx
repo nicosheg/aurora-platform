@@ -1,5 +1,4 @@
 import CelebrationOverlay from "@/components/CelebrationOverlay";
-"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -19,16 +18,11 @@ export default function MirrorOfPossibility({ onNext }: { onNext: () => void }) 
   };
 
   return (
-    <motion.section
-      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Four</motion.p>
+    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center relative overflow-hidden">
       <CelebrationOverlay />
+      <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Four</motion.p>
       <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">The Mirror of Possibility</h2>
-      <motion.div
-        className="w-64 h-64 rounded-full glass-card flex items-center justify-center cursor-pointer mx-auto mb-8"
-        whileHover={{ scale: 1.05 }}
-        onTap={tap}
-        onClick={tap}
-      >
+      <motion.div className="w-64 h-64 rounded-full glass-card flex items-center justify-center cursor-pointer mx-auto mb-8" whileHover={{ scale: 1.05 }} onTap={tap} onClick={tap}>
         <motion.div key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-white/80 text-xl font-serif p-4">
           {reflections[index]}
         </motion.div>
