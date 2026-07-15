@@ -1,12 +1,12 @@
 {
   "name": "Nana Eg",
-  "birthdayDate": "2026-07-14",
+  "birthdayDate": "2026-07-15",
   "senderName": "MrNicosh Eg (Big Bro)",
   "theme": "storybook",
   "unlockSchedule": {
-    "morning": "00:01",
-    "afternoon": "00:02",
-    "evening": "00:03"
+    "morning": "09:00",
+    "afternoon": "12:00",
+    "evening": "18:00"
   },
   "colors": {
     "primary": "#d4a574",
