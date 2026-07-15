@@ -4,15 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useMusic } from "@/contexts/MusicContext";
 
 export default function StoryOpening({ name, onComplete, morningUnlocked }: { name: string; onComplete: () => void; morningUnlocked: boolean }) {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);   // start at 1 to avoid blank
   const { startMusic } = useMusic();
 
   useEffect(() => {
-    const t1 = setTimeout(() => setStep(1), 1200);
-    const t2 = setTimeout(() => setStep(2), 5000);
-    const t3 = setTimeout(() => setStep(3), 9000);
-    const t4 = setTimeout(() => setStep(4), 13000);
-    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
+    // step 1 is already visible; schedule the rest
+    const t2 = setTimeout(() => setStep(2), 4000);  // 4s after mount
+    const t3 = setTimeout(() => setStep(3), 8000);  // 8s
+    const t4 = setTimeout(() => setStep(4), 12000); // 12s
+    return () => { clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
   }, []);
 
   const handleEnter = () => {
@@ -22,13 +22,13 @@ export default function StoryOpening({ name, onComplete, morningUnlocked }: { na
 
   return (
     <motion.div
-      className="fixed inset-0 z-[100] flex items-center justify-center"
+      className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
       style={{ background: "radial-gradient(ellipse at center, #fef7e0 0%, #f5e6c8 100%)" }}
       exit={{ opacity: 0, filter: "blur(8px)" }}
       transition={{ duration: 2, ease: [0.43, 0.13, 0.23, 0.96] }}
     >
       {/* Golden particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none">
         {[...Array(25)].map((_, i) => (
           <motion.div
             key={i}
@@ -40,23 +40,26 @@ export default function StoryOpening({ name, onComplete, morningUnlocked }: { na
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-2xl">
-        {/* Book frame decoration */}
-        <div className="absolute inset-0 border-4 border-[#d4a574]/20 rounded-3xl -m-8 pointer-events-none">
-          <span className="absolute top-3 left-5 text-3xl text-[#d4a574]/25">✦</span>
-          <span className="absolute top-3 right-5 text-3xl text-[#d4a574]/25">✦</span>
-          <span className="absolute bottom-3 left-5 text-3xl text-[#d4a574]/25">✦</span>
-          <span className="absolute bottom-3 right-5 text-3xl text-[#d4a574]/25">✦</span>
+      {/* Book frame decoration */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-[90%] max-w-2xl h-[75%] border-4 border-[#d4a574]/20 rounded-3xl relative">
+          <span className="absolute top-4 left-6 text-4xl text-[#d4a574]/25">✦</span>
+          <span className="absolute top-4 right-6 text-4xl text-[#d4a574]/25">✦</span>
+          <span className="absolute bottom-4 left-6 text-4xl text-[#d4a574]/25">✦</span>
+          <span className="absolute bottom-4 right-6 text-4xl text-[#d4a574]/25">✦</span>
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-[#d4a574]/15 transform -translate-x-1/2" />
         </div>
+      </div>
 
+      <div className="relative z-10 text-center px-6 max-w-xl">
         <AnimatePresence mode="wait">
           {step === 1 && (
             <motion.div
               key="s1"
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.8, ease: "easeOut" }}
+              transition={{ duration: 1.2 }}
             >
               <motion.div
                 className="text-8xl mb-6"
@@ -74,10 +77,10 @@ export default function StoryOpening({ name, onComplete, morningUnlocked }: { na
           {step === 2 && (
             <motion.p
               key="s2"
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.8, ease: "easeOut" }}
+              transition={{ duration: 1.2 }}
               className="text-2xl md:text-4xl font-serif italic text-[#4a3728] leading-relaxed"
             >
               And yours started on a very special day.
@@ -87,10 +90,10 @@ export default function StoryOpening({ name, onComplete, morningUnlocked }: { na
           {step === 3 && (
             <motion.p
               key="s3"
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.8, ease: "easeOut" }}
+              transition={{ duration: 1.2 }}
               className="text-2xl md:text-4xl font-serif italic text-[#4a3728] leading-relaxed"
             >
               Today we celebrate the hero you are.
