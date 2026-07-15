@@ -49,9 +49,14 @@ export default function TributeOpening({ lines, buttonText, heroImage, name, onN
       {index === lines.length && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="space-y-8">
           <h1 className="text-4xl md:text-6xl font-serif font-bold gradient-text">{name}</h1>
-          <button onClick={handleBegin} className="px-10 py-4 bg-gradient-to-br from-[#c9a96e] to-[#b8956e] text-white font-serif text-xl rounded-full shadow-2xl" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.button
+            onClick={handleBegin}
+            className="px-10 py-4 bg-gradient-to-br from-[#c9a96e] to-[#b8956e] text-white font-serif text-xl rounded-full shadow-2xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             {buttonText}
-          </button>
+          </motion.button>
         </motion.div>
       )}
     </section>
