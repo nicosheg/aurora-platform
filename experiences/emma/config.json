@@ -15,7 +15,7 @@
     "text": "#f5f0eb",
     "glass": "rgba(255, 245, 225, 0.05)"
   },
-  "musicUrl": "/experiences/emma/audio/favorite-song.mp3",
+  "musicUrl": "/experiences/emma/audio/favorite-song.mp3#t=10",
   "heroImage": "/experiences/emma/hero.jpg",
   "sections": {
     "welcome": {
