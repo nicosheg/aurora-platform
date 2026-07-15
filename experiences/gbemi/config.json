@@ -12,7 +12,7 @@
   },
   "musicUrl": "/experiences/gbemi/audio/music.mp3#t=10",
   "heroImage": "/experiences/gbemi/second-image.png",
-  "voiceNoteUrl": "/experiences/nana/voices/brother.opus",
+  "voiceNoteUrl": "/experiences/gbemi/audio/voice.aac",
   "sections": {
     "opening": {
       "lines": [
