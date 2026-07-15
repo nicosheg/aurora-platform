@@ -9,7 +9,6 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const { lowerVolume, restoreVolume } = useMusic();
 
-  // Clean up audio on unmount
   useEffect(() => {
     return () => {
       if (audioRef.current) {
@@ -20,12 +19,10 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
     };
   }, []);
 
-  // Find all voices for a given family member (by name matching)
   const getVoicesForMember = (memberName: string) => {
     return voices.filter((v: any) => v.name === memberName);
   };
 
-  // Play a list of voices sequentially
   const playSequential = async (voiceList: any[], index: number = 0) => {
     if (index >= voiceList.length) {
       setPlayingId(null);
@@ -44,7 +41,6 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
     audio.play().catch(() => {});
 
     audio.onended = () => {
-      // Play next voice in list
       playSequential(voiceList, index + 1);
     };
   };
@@ -53,7 +49,6 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
     const memberVoices = getVoicesForMember(memberName);
     if (memberVoices.length === 0) return;
 
-    // If already playing, stop
     if (playingId) {
       if (audioRef.current) {
         audioRef.current.pause();
@@ -64,11 +59,9 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
       return;
     }
 
-    // Start sequential playback
     playSequential(memberVoices);
   };
 
-  // Determine if a member has any voice note
   const hasVoice = (memberName: string) => {
     return getVoicesForMember(memberName).length > 0;
   };
@@ -78,15 +71,13 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
       <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Two</motion.p>
       <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">The Kingdom of Love</h2>
       <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-12">
-        {family.map((member, i) => {
+        {family.slice(0, 4).map((member, i) => {
           const memberHasVoice = hasVoice(member.time);
-          // Aluaye (Anydupe) – no voice button
-          const isAluaye = member.time === "Aluaye" || member.time === "Anydupe";
           return (
             <motion.div key={i} className="glass-card-light p-6 cursor-pointer" whileHover={{ scale: 1.05 }} onClick={() => setSelected(member)}>
               <div className="text-4xl mb-2">🏰</div>
               <p className="text-[#f0d080] font-serif">{member.time}</p>
-              {memberHasVoice && !isAluaye && (
+              {memberHasVoice && (
                 <button
                   onClick={(e) => { e.stopPropagation(); handlePlay(member.time); }}
                   className="mt-2 text-xs text-white/50 hover:text-white/80"
@@ -98,6 +89,27 @@ export default function KingdomOfLove({ family, voices, onNext }: { family: any[
           );
         })}
       </div>
+      {/* 5th person (Antydupe) centered */}
+      {family.length > 4 && (
+        <div className="flex justify-center mb-12">
+          <motion.div
+            className="glass-card-light p-6 cursor-pointer w-40"
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setSelected(family[4])}
+          >
+            <div className="text-4xl mb-2">🏰</div>
+            <p className="text-[#f0d080] font-serif">{family[4].time}</p>
+            {hasVoice(family[4].time) && (
+              <button
+                onClick={(e) => { e.stopPropagation(); handlePlay(family[4].time); }}
+                className="mt-2 text-xs text-white/50 hover:text-white/80"
+              >
+                {playingId && getVoicesForMember(family[4].time).some(v => v.id === playingId) ? "🔊 Playing..." : "🎤 Listen"}
+              </button>
+            )}
+          </motion.div>
+        </div>
+      )}
       {selected && (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="glass-card p-6 max-w-md mx-auto mb-8">
           <p className="text-white/80">{selected.description}</p>

@@ -21,28 +21,28 @@
       "name": "Grandma",
       "emoji": "💛",
       "message": "My sweet Nana, you are the light of our family.",
-      "audio": "/experiences/nana/voices/grandma.aac"
+      "audio": "/experiences/nana/voices/grandma.opus"
     },
     {
       "id": "v2",
       "name": "Grandma",
       "emoji": "💛",
       "message": "Another blessing from your grandma.",
-      "audio": "/experiences/nana/voices/grandma2.aac"
+      "audio": "/experiences/nana/voices/grandma2.opus"
     },
     {
       "id": "v3",
-      "name": "Aluaye",
+      "name": "Antydupe",
       "emoji": "🌸",
       "message": "Nana! You're such a beautiful soul. Never change who you are.",
-      "audio": ""
+      "audio": "/experiences/nana/voices/anydupe.opus"
     },
     {
       "id": "v4",
       "name": "Big Bro Nicosh",
       "emoji": "🖤",
       "message": "Forever and always.",
-      "audio": "/experiences/nana/voices/brother.aac"
+      "audio": "/experiences/nana/voices/brother.opus"
     }
   ],
   "chapters": {
@@ -60,8 +60,9 @@
       "timeline": [
         { "id":"t1", "time":"Mom", "title":"The Anchor", "description":"My sweet Nana, you are the greatest gift life ever gave me." },
         { "id":"t2", "time":"Big Bro Nicosh", "title":"The Protector", "description":"I'll always be here — to protect you, to annoy you, to love you. That's what big brothers do. Forever and always." },
-        { "id":"t3", "time":"Grandma", "title":"The Wise One", "description":"My dear child, you have a light inside you that can never be dimmed. Shine bright, always. I love you." },
-        { "id":"t4", "time":"Aluaye", "title":"The Real One", "description":"Nana! You're such a special soul. Never change who you are. The world is better because you're in it." }
+        { "id":"t3", "time":"Aluaye", "title":"The Partner-in-Crime", "description":"Nana, you're not just my sister – you're my friend. Life's way more fun with you in it." },
+        { "id":"t4", "time":"Grandma", "title":"The Wise One", "description":"My dear child, you have a light inside you that can never be dimmed. Shine bright, always." },
+        { "id":"t5", "time":"Antydupe", "title":"The Loving Aunt", "description":"Nana! You're such a special soul. The world is better because you're in it." }
       ]
     },
     "three": {
