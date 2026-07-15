@@ -1,3 +1,4 @@
+import CelebrationOverlay from "@/components/CelebrationOverlay";
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,7 +15,8 @@ export default function SkyOfDreams({ onNext }: { onNext: () => void }) {
   };
 
   return (
-    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-gradient-to-b from-[#1a1a3a] to-[#0d0a05]">
+    <motion.section
+      <CelebrationOverlay /> initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-gradient-to-b from-[#1a1a3a] to-[#0d0a05]">
       <motion.p className="text-[#f0d080] text-sm uppercase tracking-[0.3em] mb-4">World Five</motion.p>
       <h2 className="text-3xl md:text-5xl font-serif font-light text-[#f0d080] mb-8">The Sky of Dreams</h2>
       <div className="flex gap-2 mb-8 max-w-md w-full">

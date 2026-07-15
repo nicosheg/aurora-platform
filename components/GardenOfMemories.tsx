@@ -1,9 +1,11 @@
+import CelebrationOverlay from "@/components/CelebrationOverlay";
 "use client";
 import { motion } from "framer-motion";
 
 export default function GardenOfMemories({ photos, onNext }: { photos: any[]; onNext: () => void }) {
   return (
-    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center relative overflow-hidden">
+    <motion.section
+      <CelebrationOverlay /> initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center relative overflow-hidden">
       {/* Floating petals */}
       {[...Array(15)].map((_, i) => (
         <motion.div
