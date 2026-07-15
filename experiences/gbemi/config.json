@@ -4,14 +4,15 @@
   "senderName": "MrNicosh",
   "theme": "tribute",
   "colors": {
-    "primary": "#c9a96e",
-    "accent": "#b8956e",
+    "primary": "#d48ba0",
+    "accent": "#f0c0d0",
     "background": "#0a0a0f",
     "text": "#f5f0eb",
-    "glass": "rgba(255, 245, 225, 0.05)"
+    "glass": "rgba(255, 240, 245, 0.06)"
   },
   "musicUrl": "/experiences/gbemi/audio/music.mp3#t=10",
   "heroImage": "/experiences/gbemi/second-image.png",
+  "voiceNoteUrl": "/experiences/nana/voices/brother.opus",
   "sections": {
     "opening": {
       "lines": [
@@ -39,6 +40,13 @@
         "You're the kind of friend people don't appreciate enough until years later.",
         "I hope you never lose your curiosity."
       ]
+    },
+    "yourMagic": {
+      "title": "Your Magic",
+      "intro": "Some people walk into a room and everything changes. You were that person.",
+      "explorer": "You love exploring — not just places, but ideas, possibilities, and the best in people. That's rare. That's you.",
+      "fiduciaHelp": "When I was building FIDUCIA, you didn't just help — you showed up with ideas, energy, and belief. You made it better. I'll never forget that.",
+      "secondImage": "/experiences/gbemi/hero.jpg"
     },
     "library": {
       "books": [

@@ -7,6 +7,7 @@ import CelebrationOverlay from "./CelebrationOverlay";
 import TributeOpening from "./TributeOpening";
 import TributeRipple from "./TributeRipple";
 import TributeHidden from "./TributeHidden";
+import TributeYourMagic from "./TributeYourMagic";
 import TributeLibrary from "./TributeLibrary";
 import TributeFuture from "./TributeFuture";
 import TributeConstellation from "./TributeConstellation";
@@ -16,13 +17,12 @@ import TributeEnding from "./TributeEnding";
 
 export default function TributeExperience({ config }: { config: any }) {
   const [step, setStep] = useState(0);
-  const { sections, musicUrl, heroImage, name, senderName } = config;
+  const { sections, musicUrl, heroImage, name, senderName, voiceNoteUrl } = config;
 
   const next = () => setStep(s => s + 1);
   const prev = () => setStep(s => Math.max(0, s - 1));
 
-  // All sections wrapped with CelebrationOverlay
-  const wrapWithCelebration = (component: JSX.Element) => (
+  const wrap = (component: JSX.Element) => (
     <div className="relative min-h-screen">
       <CelebrationOverlay />
       {component}
@@ -30,15 +30,16 @@ export default function TributeExperience({ config }: { config: any }) {
   );
 
   const steps = [
-    wrapWithCelebration(<TributeOpening key="opening" lines={sections.opening.lines} buttonText={sections.opening.buttonText} heroImage={heroImage} name={name} onNext={next} />),
-    wrapWithCelebration(<TributeRipple key="ripple" memories={sections.ripple.memories} onNext={next} onBack={prev} />),
-    wrapWithCelebration(<TributeHidden key="hidden" envelopes={sections.hidden.envelopes} onNext={next} onBack={prev} />),
-    wrapWithCelebration(<TributeLibrary key="library" books={sections.library.books} onNext={next} onBack={prev} />),
-    wrapWithCelebration(<TributeFuture key="future" doors={sections.future.doors} onNext={next} onBack={prev} />),
-    wrapWithCelebration(<TributeConstellation key="constellation" message={sections.constellation.message} name={name} onNext={next} onBack={prev} />),
-    wrapWithCelebration(<TributeForgotten key="forgotten" text={sections.forgotten.text} onNext={next} onBack={prev} />),
-    wrapWithCelebration(<TributeGift key="gift" prompts={sections.gift.prompts} onNext={next} onBack={prev} />),
-    wrapWithCelebration(<TributeEnding key="ending" message={sections.ending.message} closing={sections.ending.closing} senderName={senderName} name={name} onBack={prev} />),
+    wrap(<TributeOpening key="opening" lines={sections.opening.lines} buttonText={sections.opening.buttonText} heroImage={heroImage} name={name} onNext={next} />),
+    wrap(<TributeRipple key="ripple" memories={sections.ripple.memories} onNext={next} onBack={prev} />),
+    wrap(<TributeHidden key="hidden" envelopes={sections.hidden.envelopes} voiceNoteUrl={voiceNoteUrl} onNext={next} onBack={prev} />),
+    wrap(<TributeYourMagic key="yourMagic" {...sections.yourMagic} onNext={next} onBack={prev} />),
+    wrap(<TributeLibrary key="library" books={sections.library.books} onNext={next} onBack={prev} />),
+    wrap(<TributeFuture key="future" doors={sections.future.doors} onNext={next} onBack={prev} />),
+    wrap(<TributeConstellation key="constellation" message={sections.constellation.message} name={name} onNext={next} onBack={prev} />),
+    wrap(<TributeForgotten key="forgotten" text={sections.forgotten.text} onNext={next} onBack={prev} />),
+    wrap(<TributeGift key="gift" prompts={sections.gift.prompts} onNext={next} onBack={prev} />),
+    wrap(<TributeEnding key="ending" message={sections.ending.message} closing={sections.ending.closing} senderName={senderName} name={name} onBack={prev} />),
   ];
 
   return (

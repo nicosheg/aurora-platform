@@ -25,7 +25,7 @@ export default function TributeOpening({ lines, buttonText, heroImage, name, onN
         <motion.img
           src={heroImage}
           alt=""
-          className="w-40 h-40 md:w-52 md:h-52 object-cover rounded-full border-4 border-[#c9a96e]/30 shadow-2xl mb-8"
+          className="w-40 h-40 md:w-52 md:h-52 object-cover rounded-full border-4 border-[#d48ba0]/30 shadow-2xl mb-8"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
@@ -51,7 +51,7 @@ export default function TributeOpening({ lines, buttonText, heroImage, name, onN
           <h1 className="text-4xl md:text-6xl font-serif font-bold gradient-text">{name}</h1>
           <motion.button
             onClick={handleBegin}
-            className="px-10 py-4 bg-gradient-to-br from-[#c9a96e] to-[#b8956e] text-white font-serif text-xl rounded-full shadow-2xl"
+            className="px-10 py-4 bg-gradient-to-br from-[#d48ba0] to-[#c08090] text-white font-serif text-xl rounded-full shadow-2xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
