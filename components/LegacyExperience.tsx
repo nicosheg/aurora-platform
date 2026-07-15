@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import MusicToggle from "./MusicToggle";
 import LegacyWelcome from "./LegacyWelcome";
 import LegacyStory from "./LegacyStory";
 import LegacyStrengths from "./LegacyStrengths";
@@ -11,13 +12,13 @@ import LegacyFinal from "./LegacyFinal";
 
 export default function LegacyExperience({ config }: { config: any }) {
   const [step, setStep] = useState(0);
-  const { sections } = config;
+  const { sections, musicUrl, heroImage } = config;
 
   const next = () => setStep(s => s + 1);
   const prev = () => setStep(s => Math.max(0, s - 1));
 
   const steps = [
-    <LegacyWelcome key="welcome" {...sections.welcome} onNext={next} />,
+    <LegacyWelcome key="welcome" {...sections.welcome} heroImage={heroImage} onNext={next} />,
     <LegacyStory key="story" message={sections.story.message} onNext={next} onBack={prev} />,
     <LegacyStrengths key="strengths" items={sections.strengths} onNext={next} onBack={prev} />,
     <LegacyScripture key="scripture" {...sections.scripture} onNext={next} onBack={prev} />,
@@ -28,6 +29,7 @@ export default function LegacyExperience({ config }: { config: any }) {
 
   return (
     <main className="relative min-h-screen bg-[#0a0a0f] text-white overflow-hidden">
+      {musicUrl && <MusicToggle musicUrl={musicUrl} />}
       <AnimatePresence mode="wait">
         <motion.div
           key={step}

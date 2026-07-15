@@ -15,6 +15,8 @@
     "text": "#f5f0eb",
     "glass": "rgba(255, 245, 225, 0.05)"
   },
+  "musicUrl": "/experiences/emma/audio/favorite-song.mp3",
+  "heroImage": "/experiences/emma/hero.jpg",
   "sections": {
     "welcome": {
       "title": "Happy Birthday, Brother Emma Best.",
@@ -58,6 +60,5 @@
       "quote": "The world doesn’t only need successful people. It needs faithful people who leave others better than they found them.",
       "closing": "Happy Birthday, Brother Emma.\nMay God continue to guide every step you take."
     }
-  },
-  "musicUrl": ""
+  }
 }
