@@ -5,6 +5,7 @@ import DefaultExperience from "@/components/DefaultExperience";
 import SixteenthChapter from "@/components/SixteenthChapter";
 import LegacyExperience from "@/components/LegacyExperience";
 import TributeExperience from "@/components/TributeExperience";
+import FiftiethExperience from "@/components/FiftiethExperience";
 
 export default function ExperiencePage({ params }: { params: { experience: string } }) {
   const [config, setConfig] = useState<ExperienceConfig | null>(null);
@@ -40,6 +41,10 @@ export default function ExperiencePage({ params }: { params: { experience: strin
 
   if (config.theme === "tribute") {
     return <TributeExperience config={config} />;
+  }
+
+  if (config.theme === "fiftieth") {
+    return <FiftiethExperience config={config} />;
   }
 
   return <DefaultExperience config={config} />;

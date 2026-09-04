@@ -1,0 +1,150 @@
+{
+  "name": "Uncle",
+  "birthdayDate": "2026-09-04",
+  "senderName": "Nicholas",
+  "theme": "fiftieth",
+  "colors": {
+    "primary": "#b8956e",
+    "accent": "#d4a574",
+    "background": "#0a0a0f",
+    "text": "#f5f0eb",
+    "glass": "rgba(255, 245, 225, 0.05)"
+  },
+  "musicUrl": "/experiences/uncle/audio/theme.mp3#t=5",
+  "heroImage": "/experiences/uncle/photos/hero.jpg",
+  "sections": {
+    "opening": {
+      "number": "50",
+      "years": "1976 → 2026",
+      "lines": [
+        "50 years.",
+        "18,250 days.",
+        "Thousands of mornings.",
+        "Thousands of decisions.",
+        "Countless people touched by your life.",
+        "And one family that has a lot to thank you for."
+      ],
+      "buttonText": "Begin the Story"
+    },
+    "before": {
+      "title": "Before We Knew You",
+      "photos": [
+        { "src": "/experiences/uncle/photos/child1.jpg", "year": "1976", "caption": "A young boy was born…" },
+        { "src": "/experiences/uncle/photos/school.jpg", "year": "1984", "caption": "School days, early dreams" },
+        { "src": "/experiences/uncle/photos/family.jpg", "year": "1990", "caption": "Family, always first" }
+      ]
+    },
+    "roles": {
+      "title": "The Man We Know",
+      "items": [
+        { "role": "BROTHER", "message": "You may see yourself as a brother, but to us you became a pillar." },
+        { "role": "HUSBAND", "message": "You built a home with love, patience, and strength." },
+        { "role": "FATHER", "message": "You gave more than provision – you gave presence." },
+        { "role": "UNCLE", "message": "You may see yourself as simply an uncle. But to some of us, you became much more than that." },
+        { "role": "FRIEND", "message": "You were never too busy to listen, never too proud to help." },
+        { "role": "PROVIDER", "message": "You carried responsibilities quietly, without complaint." }
+      ]
+    },
+    "yourChapter": {
+      "title": "My Story",
+      "paragraphs": [
+        "I was very young when Dad died.",
+        "I don't remember every detail of those years.",
+        "But I remember something that mattered.",
+        "When things became difficult, you stepped up.",
+        "Some of the responsibilities that could have overwhelmed Mum didn't have to be carried alone.",
+        "You helped carry part of the weight.",
+        "You probably thought you were just helping family.",
+        "But to a little boy growing up without his father…",
+        "that help became part of his foundation."
+      ]
+    },
+    "unknown": {
+      "title": "The Things You May Never Know",
+      "memories": [
+        { "text": "You probably don't remember paying for this." },
+        { "text": "You probably don't remember this conversation." },
+        { "text": "You probably don't remember helping Mum with this." },
+        { "text": "You probably don't remember me watching you do this." },
+        { "text": "You probably don't remember the time you showed up when nobody else could." }
+      ]
+    },
+    "receipts": {
+      "title": "The Receipts",
+      "investments": [
+        "Education",
+        "Food",
+        "Family",
+        "Opportunities",
+        "Your upbringing",
+        "Moments",
+        "Advice",
+        "Protection"
+      ],
+      "message": "You invested in a child. The child grew. And he's building things. He's still learning. Still dreaming. Still becoming."
+    },
+    "fiftyWords": {
+      "title": "50 Years, 50 Words",
+      "words": [
+        "Strong", "Patient", "Generous", "Funny", "Reliable",
+        "Protective", "Hardworking", "Family", "Wisdom", "Courage"
+      ]
+    },
+    "familyVoices": {
+      "title": "The Family Speaks",
+      "voices": [
+        { "name": "Mom", "audio": "/experiences/uncle/voices/mom.aac" },
+        { "name": "Brother", "audio": "/experiences/uncle/voices/brother.aac" },
+        { "name": "Sister", "audio": "/experiences/uncle/voices/sister.aac" },
+        { "name": "You", "audio": "/experiences/uncle/voices/you.aac" }
+      ]
+    },
+    "manAt50": {
+      "title": "The Man at 50",
+      "number": "50",
+      "lines": [
+        "Half a century.",
+        "But this isn't the end of the story.",
+        "There are still mornings to wake up to.",
+        "Places to go.",
+        "People to love.",
+        "Things to build.",
+        "Stories nobody has written yet."
+      ],
+      "closing": "Your next chapter begins now."
+    },
+    "surprise": {
+      "buttonText": "OPEN YOUR GIFT",
+      "message": "This isn't something I bought. It's something I wanted you to have."
+    },
+    "finalLetter": {
+      "title": "A Letter from Nicholas",
+      "paragraphs": [
+        "Uncle,",
+        "I don't think I've ever properly told you what your presence has meant to me.",
+        "I was very young when Dad died, so there are parts of my childhood I don't remember clearly.",
+        "But I remember growing up and seeing you there. Helping. Supporting. Showing up.",
+        "And I don't think you ever fully realized what that meant.",
+        "You didn't have to carry every responsibility. You didn't have to step in the way you did.",
+        "But you did. And because you did, some things became a little easier for Mum, and life became a little more secure for us.",
+        "I'm older now, and I'm beginning to understand something I couldn't have understood as a child: sometimes love doesn't look like words. Sometimes it looks like responsibility. Sometimes it looks like sacrifice. Sometimes it looks like quietly helping someone and never asking to be thanked.",
+        "You've done that for us. And I want you to know that I haven't forgotten.",
+        "I'm still becoming. I'm still learning. I'm still trying to build something meaningful with the life I've been given.",
+        "And when I look back at where I started, I know I didn't get here completely by myself. You were part of the foundation.",
+        "So today, at 50, I hope you don't only see another year. I hope you see the people you've helped. The family you've supported. The lives you've touched. And the things you've done that may have seemed small to you but were never small to us.",
+        "Thank you for being my uncle. Thank you for showing up. Thank you for helping carry the weight when you didn't have to. And thank you for being part of the reason I can stand here today and dream about the future.",
+        "Happy 50th Birthday. You've spent 50 years building a life. Now may the next chapter be about enjoying what you've built.",
+        "With love and gratitude, your nephew, Nicholas."
+      ]
+    },
+    "finalScene": {
+      "lines": [
+        "50 YEARS.",
+        "ONE LIFE.",
+        "COUNTLESS LIVES TOUCHED.",
+        "HAPPY 50TH, UNCLE. ❤️"
+      ],
+      "closing": "Your story isn't finished."
+    }
+  }
+}
