@@ -1,5 +1,5 @@
 {
-  "name": "Uncle",
+  "name": "Uncle Greg",
   "birthdayDate": "2026-09-04",
   "senderName": "Nicholas",
   "theme": "fiftieth",
@@ -10,7 +10,7 @@
     "text": "#f5f0eb",
     "glass": "rgba(255, 245, 225, 0.05)"
   },
-  "musicUrl": "/experiences/uncle/audio/theme.mp3#t=5",
+  "musicUrl": "",
   "heroImage": "/experiences/uncle/photos/hero.jpg",
   "sections": {
     "opening": {
@@ -93,10 +93,10 @@
     "familyVoices": {
       "title": "The Family Speaks",
       "voices": [
-        { "name": "Mom", "audio": "/experiences/uncle/voices/mom.aac" },
-        { "name": "Brother", "audio": "/experiences/uncle/voices/brother.aac" },
-        { "name": "Sister", "audio": "/experiences/uncle/voices/sister.aac" },
-        { "name": "You", "audio": "/experiences/uncle/voices/you.aac" }
+        { "name": "Mom", "audio": "" },
+        { "name": "Brother", "audio": "" },
+        { "name": "Sister", "audio": "" },
+        { "name": "You", "audio": "" }
       ]
     },
     "manAt50": {

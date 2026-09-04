@@ -9,6 +9,7 @@ export default function FamilySpeaks({ title, voices, onNext, onBack }: { title:
   const { lowerVolume, restoreVolume } = useMusic();
 
   const play = (name: string, src: string) => {
+    if (!src) return; // do nothing if no audio
     if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; restoreVolume(); }
     if (playing === name) { setPlaying(null); return; }
     const audio = new Audio(src);
@@ -26,12 +27,12 @@ export default function FamilySpeaks({ title, voices, onNext, onBack }: { title:
         {voices.map((v) => (
           <motion.button
             key={v.name}
-            className="glass-card-light p-6"
-            whileHover={{ scale: 1.05 }}
+            className={`glass-card-light p-6 ${v.audio ? "" : "opacity-50 cursor-not-allowed"}`}
+            whileHover={v.audio ? { scale: 1.05 } : {}}
             onClick={() => play(v.name, v.audio)}
           >
             <p className="text-[#d4a574] font-serif">{v.name}</p>
-            {playing === v.name ? "🔊 Playing" : "🎤 Listen"}
+            {v.audio ? (playing === v.name ? "🔊 Playing" : "🎤 Listen") : "Coming soon"}
           </motion.button>
         ))}
       </div>
