@@ -9,7 +9,7 @@ import FiftiethExperience from "@/components/FiftiethExperience";
 import uncleGregConfig from "@/experiences/unclegreg/config.json";
 
 const BUILTIN: Record<string, ExperienceConfig> = {
-  unclegreg: uncleGregConfig as ExperienceConfig
+  unclegreg: uncleGregConfig as unknown as ExperienceConfig
 };
 
 export default function ExperiencePage({ params }: { params: { experience: string } }) {
