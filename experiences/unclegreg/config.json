@@ -11,6 +11,11 @@
     "glass": "rgba(255, 245, 225, 0.05)"
   },
   "musicUrl": "",
+  "musicTracks": {
+    "opening": "",
+    "middle": "",
+    "ending": ""
+  },
   "heroImage": "/experiences/uncle/photos/hero.jpg",
   "sections": {
     "opening": {
