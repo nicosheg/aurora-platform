@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Surprise({ buttonText, message, onNext, onBack }: { buttonText: string; message: string; onNext: () => void; onBack: () => void }) {
