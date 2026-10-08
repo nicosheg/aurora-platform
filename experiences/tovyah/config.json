@@ -1,0 +1,162 @@
+{
+  "name": "Tovyah",
+  "experienceId": "tovyah",
+  "birthdayDate": "2026-10-08",
+  "birthdayLabel": "October 8, 2026",
+  "unlockAt": "2027-10-08T00:00:00+01:00",
+  "senderName": "Nicholas",
+  "theme": "tovyah",
+  "colors": {
+    "primary": "#d2b477",
+    "accent": "#f0dfb0",
+    "background": "#060913",
+    "text": "#f5f0e7",
+    "glass": "rgba(255, 247, 229, 0.055)"
+  },
+  "musicUrl": "",
+  "musicTracks": { "opening": "", "middle": "", "ending": "" },
+  "voiceNotes": [
+    { "id": "v1", "label": "Opening voice note", "src": "" },
+    { "id": "v2", "label": "Middle voice note", "src": "" },
+    { "id": "v3", "label": "Closing voice note", "src": "" }
+  ],
+  "sections": {
+    "opening": {
+      "lines": [
+        "There are people you meet…",
+        "And there are people you grow up with.",
+        "You were one of mine.",
+        "And somehow… more than 10 years later, I still remember us.",
+        "Today is your birthday.",
+        "So I made something for you."
+      ],
+      "buttonText": "Begin"
+    },
+    "childhood": {
+      "eyebrow": "CHAPTER 01",
+      "title": "Once Upon a Childhood",
+      "paragraphs": [
+        "Before adulthood. Before distance. Before everybody got busy.",
+        "There was school, random conversations, laughing at things that were not really that funny, and being together without needing a reason.",
+        "The details below are deliberately yours to fill with the memories only you can actually remember."
+      ],
+      "memories": [
+        { "id": "childhood-01", "label": "MEMORY 01", "title": "The first real memory", "year": "Childhood", "text": "", "image": "", "imageAlt": "A childhood photograph" },
+        { "id": "childhood-02", "label": "MEMORY 02", "title": "One of the ordinary days", "year": "School days", "text": "", "image": "", "imageAlt": "An old school photograph" },
+        { "id": "childhood-03", "label": "MEMORY 03", "title": "Something that still makes you smile", "year": "Somewhere back then", "text": "", "image": "", "imageAlt": "A meaningful childhood photograph" }
+      ]
+    },
+    "timeMachine": {
+      "eyebrow": "THE MEMORY TIME MACHINE",
+      "title": "THEN ← DISTANCE → NOW",
+      "intro": "Drag through the years. The further you move, the quieter the story becomes — until it finds the present again.",
+      "points": [
+        { "id": "then", "era": "THEN", "year": "Childhood", "title": "Before everything changed", "description": "We were young enough to think ordinary days would last forever." },
+        { "id": "school", "era": "SCHOOL", "year": "The years together", "title": "Growing up side by side", "description": "School, silly conversations, shared routines, and memories that never announced themselves as important." },
+        { "id": "close", "era": "CLOSER", "year": "The last really close chapter", "title": "Before life pulled outward", "description": "This is the point where the years stop feeling like one continuous story." },
+        { "id": "distance", "era": "DISTANCE", "year": "10+ YEARS", "title": "Then life took us in different directions", "description": "Different places. Different routines. Different people. Different lives." },
+        { "id": "now", "era": "NOW", "year": "2026", "title": "And here we are", "description": "Distance has a funny way of showing you what actually mattered." }
+      ]
+    },
+    "remembered": {
+      "eyebrow": "CHAPTER 03",
+      "title": "Funny what survives all these years.",
+      "intro": "Tap a card to open it. Replace the empty slots with real moments; never manufacture a memory just to make the page feel full.",
+      "memories": [
+        { "id": "remembered-01", "label": "I STILL REMEMBER…", "title": "A thing you used to say", "year": "Then", "text": "" },
+        { "id": "remembered-02", "label": "I STILL REMEMBER…", "title": "An inside joke", "year": "Then", "text": "" },
+        { "id": "remembered-03", "label": "I STILL REMEMBER…", "title": "A completely ordinary day", "year": "Then", "text": "" },
+        { "id": "remembered-04", "label": "I STILL REMEMBER…", "title": "A small thing that mattered later", "year": "Then", "text": "" }
+      ]
+    },
+    "thenNow": {
+      "eyebrow": "CHAPTER 04",
+      "title": "The Two Versions of Us",
+      "leftLabel": "TOVYAH, THEN",
+      "leftText": "We were children when we knew each other best.",
+      "rightLabel": "TOVYAH, NOW",
+      "rightText": "I don't know every chapter you've lived since then. And that's okay. I just hope life has been kind to you — and that the girl I knew is still somewhere in the woman you've become.",
+      "currentPhoto": ""
+    },
+    "question": {
+      "prompt": "What do you miss most about childhood?",
+      "choices": [
+        { "id": "people", "label": "The people", "branch": { "title": "Maybe that's what growing up does to us.", "lines": ["It doesn't always make us forget people.", "Sometimes it simply makes us realise how much of our lives was shared with them."] } },
+        { "id": "chaos", "label": "The chaos", "branch": { "title": "Honestly…", "lines": ["We probably had no idea how good we had it.", "Children are remarkably talented at turning ordinary days into stories."] } },
+        { "id": "simple", "label": "How simple everything felt", "branch": { "title": "Funny how that works.", "lines": ["The things we wanted to escape from as children can become the exact things we miss as adults.", "Simple is a luxury we only recognise after it is gone."] } },
+        { "id": "random", "label": "The random moments", "branch": { "title": "Exactly.", "lines": ["The moments that become memories usually don't announce themselves first.", "They are just ordinary moments that somehow survive."] } }
+      ]
+    },
+    "letter": {
+      "title": "A Letter Across Time",
+      "paragraphs": [
+        "Hey Tovyah,",
+        "I know this is probably not the kind of birthday message you expected from me.",
+        "It's actually funny thinking about how long it's been.",
+        "We were kids once. We were just there, living those little everyday moments without knowing that one day we'd look back at them and realise they were some of the good years.",
+        "Then life happened. Somehow more than ten years went by.",
+        "And even though we're far from the people we were back then, I've never forgotten that you were once a really important part of my life.",
+        "Some friendships don't need to remain exactly the same to still have meant something. Ours is one of those.",
+        "So today, I didn't just want to say happy birthday. I wanted to remind you that somewhere in your past, there is a little version of you who had a friend who genuinely loved having you around.",
+        "That friend is still here. Just older. Probably more tired. Hopefully wiser.",
+        "I hope this next chapter of your life is beautiful. I hope you find people who make life lighter. I hope you experience things that your younger self could not even imagine.",
+        "And I hope when you look back years from now, you'll realise you've lived a life worth remembering.",
+        "Happy Birthday, Tovyah.",
+        "From one childhood friend to another, I'm glad our paths crossed.",
+        "Nicholas"
+      ]
+    },
+    "celebration": {
+      "lines": [
+        "THEN",
+        "becomes",
+        "NOW",
+        "HAPPY BIRTHDAY, TOVYAH",
+        "Here's to everything you've been.",
+        "Everything you've become.",
+        "And everything you haven't become yet.",
+        "YOUR STORY IS STILL BEING WRITTEN."
+      ],
+      "heroPhoto": ""
+    },
+    "constellation": {
+      "eyebrow": "THE MEMORY CONSTELLATION",
+      "title": "Some memories never really disappear.",
+      "memories": [
+        "A laugh",
+        "A place",
+        "A random day",
+        "A school memory",
+        "An inside joke",
+        "A forgotten moment",
+        "A tiny victory",
+        "A silly argument",
+        "A person",
+        "A day that meant nothing then"
+      ],
+      "finalLine": "Somewhere between then and now, the memories kept their light."
+    },
+    "timeCapsule": {
+      "eyebrow": "ONE LAST THING",
+      "title": "Write to your future self.",
+      "intro": "You spent today looking backwards. Now leave something for the future. This message will stay sealed until your next birthday.",
+      "prompts": [
+        { "id": "where", "label": "Where do you hope you are one year from now?", "placeholder": "Maybe a place, a dream, a season of life…" },
+        { "id": "changed", "label": "What do you hope has changed?", "placeholder": "A habit, a fear, a relationship, a goal…" },
+        { "id": "never", "label": "What do you hope never changes?", "placeholder": "Something about you that you want to protect." },
+        { "id": "remember", "label": "What should your future self remember about today?", "placeholder": "Anything you never want to forget." }
+      ]
+    },
+    "ending": {
+      "lines": [
+        "We were kids once.",
+        "Life took us somewhere else.",
+        "More than ten years passed.",
+        "But some people remain part of your story.",
+        "Happy Birthday, Tovyah.",
+        "I'm glad you were part of mine."
+      ],
+      "comebackLabel": "COME BACK NEXT YEAR"
+    }
+  }
+}
