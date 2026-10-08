@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import TovyahExperience from "@/components/TovyahExperience";
 import tovyahConfig from "@/experiences/tovyah/config.json";
+import type { TovyahExperienceConfig } from "@/types";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +11,7 @@ export default function TovyahPrivatePage({ params }: { params: { token: string 
 
   return (
     <TovyahExperience
-      config={tovyahConfig as any}
+      config={tovyahConfig as unknown as TovyahExperienceConfig}
       accessToken={params.token}
     />
   );
