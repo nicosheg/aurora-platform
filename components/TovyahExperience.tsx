@@ -192,7 +192,7 @@ export default function TovyahExperience({ config, accessToken }: Props) {
       })
       .catch(() => {});
     return () => controller.abort();
-  }, [config.experienceId]);
+  }, [config.experienceId, accessToken]);
 
   const begin = () => {
     setStarted(true);
