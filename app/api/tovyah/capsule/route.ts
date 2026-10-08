@@ -3,7 +3,11 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const ALLOWED_SLUG = "tovyah-8f4c92e1b7a64d9a";
+const EXPERIENCE_ID = "tovyah";
+
+function getAccessToken() {
+  return process.env.TOVYAH_PUBLIC_TOKEN || "";
+}
 
 function getSupabaseConfig() {
   const url = process.env.AURORA_SUPABASE_URL;
@@ -15,15 +19,22 @@ function jsonResponse(body: Record<string, unknown>, status = 200) {
   return NextResponse.json(body, { status, headers: { "Cache-Control": "no-store, max-age=0" } });
 }
 
+function validToken(token: string | null) {
+  const expected = getAccessToken();
+  return Boolean(expected && token && token === expected);
+}
+
 export async function GET(request: NextRequest) {
-  const slug = request.nextUrl.searchParams.get("slug");
-  if (slug !== ALLOWED_SLUG) return jsonResponse({ error: "not_found" }, 404);
+  const experience = request.nextUrl.searchParams.get("experience");
+  const token = request.nextUrl.searchParams.get("token");
+
+  if (experience !== EXPERIENCE_ID || !validToken(token)) return jsonResponse({ error: "not_found" }, 404);
 
   const supabase = getSupabaseConfig();
   if (!supabase) return jsonResponse({ status: "unavailable" }, 503);
 
   const response = await fetch(
-    supabase.url + "/rest/v1/aurora_time_capsules?experience_slug=eq." + encodeURIComponent(ALLOWED_SLUG) + "&select=message,unlock_at,sealed_at&limit=1",
+    supabase.url + "/rest/v1/aurora_time_capsules?experience_slug=eq." + encodeURIComponent(EXPERIENCE_ID) + "&select=message,unlock_at,sealed_at&limit=1",
     {
       headers: { apikey: supabase.key, Authorization: "Bearer " + supabase.key },
       cache: "no-store",
@@ -44,9 +55,15 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = (await request.json()) as { slug?: string; message?: string; answers?: Record<string, string>; unlockAt?: string; };
+    const body = (await request.json()) as {
+      experience?: string;
+      token?: string;
+      message?: string;
+      answers?: Record<string, string>;
+      unlockAt?: string;
+    };
 
-    if (body.slug !== ALLOWED_SLUG) return jsonResponse({ error: "not_found" }, 404);
+    if (body.experience !== EXPERIENCE_ID || !validToken(body.token || null)) return jsonResponse({ error: "not_found" }, 404);
     if (!body.message?.trim()) return jsonResponse({ error: "message_required" }, 400);
     if (!body.unlockAt || Number.isNaN(new Date(body.unlockAt).getTime())) return jsonResponse({ error: "unlock_date_required" }, 400);
 
@@ -59,7 +76,7 @@ export async function POST(request: NextRequest) {
     });
 
     const payload = {
-      experience_slug: ALLOWED_SLUG,
+      experience_slug: EXPERIENCE_ID,
       recipient_name: "Tovyah",
       message: body.message.trim().slice(0, 12000),
       answers: sanitizedAnswers,

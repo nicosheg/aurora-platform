@@ -6,7 +6,7 @@ import AudioPlayer from "@/components/AudioPlayer";
 import MusicToggle from "@/components/MusicToggle";
 import type { TovyahExperienceConfig, TovyahMemory } from "@/types";
 
-type Props = { config: TovyahExperienceConfig };
+type Props = { config: TovyahExperienceConfig; accessToken: string };
 type CapsuleState = "idle" | "saving" | "sealed" | "error";
 type SectionId = "childhood" | "time-machine" | "remembered" | "then-now" | "question" | "letter" | "celebration" | "constellation" | "capsule" | "ending";
 
@@ -101,7 +101,7 @@ function GhostButton({ children, onClick, disabled = false }: { children: React.
   );
 }
 
-export default function TovyahExperience({ config }: Props) {
+export default function TovyahExperience({ config, accessToken }: Props) {
   const [started, setStarted] = useState(false);
   const [activeSection, setActiveSection] = useState<SectionId>("childhood");
   const [timeIndex, setTimeIndex] = useState(0);
@@ -177,7 +177,7 @@ export default function TovyahExperience({ config }: Props) {
 
   useEffect(() => {
     const controller = new AbortController();
-    fetch("/api/tovyah/capsule?slug=" + encodeURIComponent(config.publicSlug), { signal: controller.signal, cache: "no-store" })
+    fetch("/api/tovyah/capsule?experience=" + encodeURIComponent(config.experienceId) + "&token=" + encodeURIComponent(accessToken), { signal: controller.signal, cache: "no-store" })
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (!data) return;
@@ -192,7 +192,7 @@ export default function TovyahExperience({ config }: Props) {
       })
       .catch(() => {});
     return () => controller.abort();
-  }, [config.publicSlug]);
+  }, [config.experienceId]);
 
   const begin = () => {
     setStarted(true);
@@ -207,7 +207,8 @@ export default function TovyahExperience({ config }: Props) {
     setCapsuleLocal(false);
 
     const payload = {
-      slug: config.publicSlug,
+      experience: config.experienceId,
+      token: accessToken,
       message: capsuleMessage.trim(),
       answers: capsuleAnswers,
       unlockAt: config.unlockAt,

@@ -7,13 +7,10 @@ import SixteenthChapter from "@/components/SixteenthChapter";
 import LegacyExperience from "@/components/LegacyExperience";
 import TributeExperience from "@/components/TributeExperience";
 import FiftiethExperience from "@/components/FiftiethExperience";
-import TovyahExperience from "@/components/TovyahExperience";
 import uncleGregConfig from "@/experiences/unclegreg/config.json";
-import tovyahConfig from "@/experiences/tovyah/config.json";
 
 const BUILTIN: Record<string, AnyExperienceConfig> = {
   unclegreg: uncleGregConfig as unknown as ExperienceConfig,
-  [tovyahConfig.publicSlug]: tovyahConfig as unknown as AnyExperienceConfig,
 };
 
 export default function ExperiencePage({ params }: { params: { experience: string } }) {
@@ -22,6 +19,13 @@ export default function ExperiencePage({ params }: { params: { experience: strin
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    if (params.experience === "tovyah") {
+      setConfig(null);
+      setLoading(false);
+      setError(true);
+      return;
+    }
+
     const builtIn = BUILTIN[params.experience];
     if (builtIn) {
       setConfig(builtIn);
@@ -63,7 +67,6 @@ export default function ExperiencePage({ params }: { params: { experience: strin
     );
   }
 
-  if (config.theme === "tovyah") return <TovyahExperience config={config} />;
   if (config.theme === "storybook") return <SixteenthChapter config={config} />;
   if (config.theme === "legacy") return <LegacyExperience config={config} />;
   if (config.theme === "tribute") return <TributeExperience config={config} />;

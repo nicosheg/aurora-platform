@@ -59,7 +59,7 @@ export interface TovyahQuestion {
 
 export interface TovyahExperienceConfig {
   name: string;
-  publicSlug: string;
+  experienceId: string;
   birthdayDate: string;
   birthdayLabel: string;
   unlockAt: string;
